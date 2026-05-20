@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import "tailwindcss";
 
 /* ── Custom keyframes ───────────────────────────────────────────────── */
@@ -233,3 +234,6 @@
     transition-duration: 0.01ms !important;
   }
 }
+=======
+@import "tailwindcss";
+>>>>>>> e90e4c5cb95e9dcc16dc973a43ca5db7251d70da
