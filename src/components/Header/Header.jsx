@@ -142,25 +142,39 @@ export default function Header() {
   const location = useLocation();
 
   const linkClass = (path) =>
-    `no-underline text-[0.95rem] font-medium tracking-wide transition-colors duration-200 whitespace-nowrap py-2 md:py-0 ${
+    `no-underline text-[1.05rem] font-medium tracking-wide transition-colors duration-200 whitespace-nowrap py-2 md:py-0 ${
       location.pathname === path ? "text-[#e32028]" : "text-[#cccccc] hover:text-[#e32028]"
     }`;
 
   return (
     <>
       {/* ── Top Bar ── */}
-      <div className="bg-[#0a0a0a] border-b border-[#1e1e1e] h-10 flex items-center overflow-hidden">
+      <div className="bg-[#0a0a0a] border-b border-[#1e1e1e] min-h-11 flex items-center overflow-hidden">
 
-        {/* Red GoBright label */}
-        <div className="shrink-0 bg-[#e32028] h-full flex items-center px-5 gap-2 shadow-[4px_0_16px_rgba(227,32,40,0.4)]">
-          <svg width="11" height="11" viewBox="0 0 24 24" fill="white">
-            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+        {/* Call CTA */}
+        <a
+          href="tel:+918925550774"
+          className="group relative shrink-0 min-h-11 flex items-center gap-2 overflow-hidden bg-[#e32028] px-3 sm:px-5 text-white no-underline shadow-[4px_0_18px_rgba(227,32,40,0.42)]"
+        >
+          <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/25 to-transparent animate-shimmer" />
+          <span className="relative flex h-7 w-7 items-center justify-center rounded-full bg-white/15 ring-1 ring-white/25 animate-glow-pulse">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/>
+            </svg>
+          </span>
+          <span className="relative hidden sm:inline text-[0.86rem] font-extrabold tracking-wide whitespace-nowrap">
+            +91 89255 50774
+          </span>
+          <span className="relative sm:hidden text-[0.78rem] font-extrabold tracking-wide whitespace-nowrap">
+            Call
+          </span>
+          <svg className="relative hidden sm:block transition-transform duration-300 group-hover:translate-x-1" width="13" height="13" viewBox="0 0 14 14" fill="none">
+            <path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
-          <span className="text-white text-[0.68rem] font-extrabold uppercase tracking-[0.18em] whitespace-nowrap">GoBright</span>
-        </div>
+        </a>
 
         {/* Scrolling marquee */}
-        <div className="flex-1 overflow-hidden mx-3 relative">
+        <div className="flex-1 overflow-hidden mx-2 sm:mx-3 relative">
           {/* fade edges */}
           <div className="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-[#0a0a0a] to-transparent z-10 pointer-events-none" />
           <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-[#0a0a0a] to-transparent z-10 pointer-events-none" />
@@ -202,21 +216,13 @@ export default function Header() {
         </div>
 
         {/* Right — phone + CTA */}
-        <div className="shrink-0 flex items-center gap-3 pr-4 pl-3 border-l border-[#1e1e1e]">
-          <a
-            href="tel:+918925550774"
-            className="hidden sm:flex items-center gap-1.5 text-[#bbb] hover:text-[#e32028] transition-colors duration-200 no-underline text-[0.72rem] font-medium"
-          >
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/>
-            </svg>
-            +91 89255 50774
-          </a>
+        <div className="shrink-0 flex items-center pr-2 sm:pr-4 pl-2 sm:pl-3 border-l border-[#1e1e1e]">
           <button
             onClick={() => setEnquiryOpen(true)}
-            className="bg-[#e32028] hover:bg-[#c41c22] text-white px-3.5 py-1.5 rounded text-[0.7rem] font-bold transition-all duration-200 shadow-[0_0_10px_rgba(227,32,40,0.35)] hover:shadow-[0_0_18px_rgba(227,32,40,0.6)] whitespace-nowrap"
+            className="relative my-1 mr-0 sm:mr-2 overflow-hidden bg-[#e32028] hover:bg-[#c41c22] text-white px-3 sm:px-4 py-2 rounded text-[0.72rem] sm:text-[0.82rem] font-bold transition-all duration-200 shadow-[0_0_10px_rgba(227,32,40,0.35)] hover:shadow-[0_0_18px_rgba(227,32,40,0.6)] hover:-translate-y-0.5 whitespace-nowrap"
           >
-            Free Enquiry
+            <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer" />
+            <span className="relative">Free Enquiry</span>
           </button>
         </div>
 

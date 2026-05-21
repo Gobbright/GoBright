@@ -87,7 +87,7 @@ function ContactEnquiry() {
   const handle = (e) => setForm({ ...form, [e.target.name]: e.target.value });
   const submit = (e) => { e.preventDefault(); setSent(true); };
 
-  const inputClass = "bg-[#0d0d0d] border border-[#2a2a2a] rounded-lg px-4 py-2.5 text-white text-sm placeholder-[#444] focus:outline-none focus:border-[#e32028] transition-colors duration-200 w-full";
+  const inputClass = "bg-white border border-[#d8d8d8] rounded-lg px-4 py-2.5 text-[#111] text-sm placeholder-[#8a8a8a] focus:outline-none focus:border-[#e32028] focus:shadow-[0_0_0_3px_rgba(227,32,40,0.12)] transition-all duration-200 w-full";
 
   return (
     <section className="bg-[#0d0d0d] border-t border-[#1a1a1a]">
@@ -147,23 +147,23 @@ function ContactEnquiry() {
               <p className="text-[#666] text-sm">We'll get back to you within 24 hours.</p>
             </div>
           ) : (
-            <form onSubmit={submit} className="flex flex-col gap-4">
+            <form onSubmit={submit} className="flex flex-col gap-4 rounded-2xl bg-white p-5 sm:p-6 shadow-[0_18px_50px_rgba(0,0,0,0.28)]">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="flex flex-col gap-1.5">
-                  <label className="text-[#666] text-xs font-semibold uppercase tracking-wide">Your Name</label>
+                  <label className="text-[#333] text-xs font-semibold uppercase tracking-wide">Your Name</label>
                   <input name="name" value={form.name} onChange={handle} required placeholder="John Doe" className={inputClass} />
                 </div>
                 <div className="flex flex-col gap-1.5">
-                  <label className="text-[#666] text-xs font-semibold uppercase tracking-wide">Phone</label>
+                  <label className="text-[#333] text-xs font-semibold uppercase tracking-wide">Phone</label>
                   <input name="phone" value={form.phone} onChange={handle} required placeholder="+91 98765 43210" className={inputClass} />
                 </div>
               </div>
               <div className="flex flex-col gap-1.5">
-                <label className="text-[#666] text-xs font-semibold uppercase tracking-wide">Email</label>
+                <label className="text-[#333] text-xs font-semibold uppercase tracking-wide">Email</label>
                 <input name="email" value={form.email} onChange={handle} required type="email" placeholder="john@example.com" className={inputClass} />
               </div>
               <div className="flex flex-col gap-1.5">
-                <label className="text-[#666] text-xs font-semibold uppercase tracking-wide">Message</label>
+                <label className="text-[#333] text-xs font-semibold uppercase tracking-wide">Message</label>
                 <textarea name="message" value={form.message} onChange={handle} rows={4} placeholder="Tell us about your project or requirement..." className={`${inputClass} resize-none`} />
               </div>
               <button

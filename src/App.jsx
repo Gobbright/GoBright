@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
@@ -37,21 +36,10 @@ function HomePage() {
       <Testimonials />
       <Team />
       <FAQ />
-=======
-import Header from "./Header";
-import Footer from "./Footer";
-
-function App() {
-  return (
-    <>
-      <Header />
-      <Footer />
->>>>>>> e90e4c5cb95e9dcc16dc973a43ca5db7251d70da
     </>
   );
 }
 
-<<<<<<< HEAD
 export default function App() {
   return (
     <BrowserRouter>
@@ -78,6 +66,3 @@ export default function App() {
     </BrowserRouter>
   );
 }
-=======
-export default App;
->>>>>>> e90e4c5cb95e9dcc16dc973a43ca5db7251d70da

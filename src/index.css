@@ -1,5 +1,20 @@
-<<<<<<< HEAD
 @import "tailwindcss";
+
+/* Global readability bump for small body/supporting text */
+#root :where(.text-xs) {
+  font-size: 0.875rem;
+  line-height: 1.45;
+}
+
+#root :where(.text-sm) {
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+#root :where([class*="text-[0.6"], [class*="text-[0.7"], [class*="text-[0.8"], [class*="text-[0.9"]) {
+  font-size: 1rem;
+  line-height: 1.6;
+}
 
 /* ── Custom keyframes ───────────────────────────────────────────────── */
 @keyframes fadeUp {
@@ -234,6 +249,3 @@
     transition-duration: 0.01ms !important;
   }
 }
-=======
-@import "tailwindcss";
->>>>>>> e90e4c5cb95e9dcc16dc973a43ca5db7251d70da
