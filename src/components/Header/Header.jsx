@@ -1,6 +1,7 @@
-import { useState, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../../assets/logo.png";
+import { getSubmitLabel, sendContactLead, validateLead } from "../../lib/contactApi";
 
 const services = [
   "Branding & Brand identity",
@@ -12,14 +13,39 @@ const services = [
 
 function EnquiryModal({ onClose }) {
   const [form, setForm] = useState({ name: "", email: "", phone: "", service: "", message: "" });
-  const [submitted, setSubmitted] = useState(false);
+  const [errors, setErrors] = useState({});
+  const [status, setStatus] = useState("idle");
+  const [serverError, setServerError] = useState("");
 
-  const handle = (e) => setForm({ ...form, [e.target.name]: e.target.value });
+  useEffect(() => {
+    if (status !== "success") return;
+    const timer = setTimeout(onClose, 1800);
+    return () => clearTimeout(timer);
+  }, [onClose, status]);
 
-  const submit = (e) => {
+  const handle = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+    if (errors[e.target.name]) setErrors({ ...errors, [e.target.name]: "" });
+  };
+
+  const submit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(onClose, 2500);
+    const fieldErrors = validateLead(form, { requireService: true, requireMessage: true });
+    if (Object.keys(fieldErrors).length) {
+      setErrors(fieldErrors);
+      return;
+    }
+
+    setStatus("sending");
+    setServerError("");
+
+    try {
+      await sendContactLead(form);
+      setStatus("success");
+    } catch (err) {
+      setServerError(err.message || "Email send failed. Please try again.");
+      setStatus("error");
+    }
   };
 
   return (
@@ -51,34 +77,26 @@ function EnquiryModal({ onClose }) {
           </button>
         </div>
 
-        {submitted ? (
-          <div className="flex flex-col items-center justify-center py-14 gap-4">
-            <div className="w-16 h-16 rounded-full bg-[#e32028]/15 flex items-center justify-center">
-              <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                <path d="M6 16l8 8L26 8" stroke="#e32028" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </div>
-            <p className="text-white font-bold text-base">Enquiry Submitted!</p>
-            <p className="text-[#666] text-sm">Our team will contact you shortly.</p>
-          </div>
-        ) : (
-          <form onSubmit={submit} className="px-6 py-5 flex flex-col gap-4">
+        <form onSubmit={submit} className="px-6 py-5 flex flex-col gap-4">
+            {serverError && <p className="rounded-lg bg-[#e32028]/10 px-3 py-2 text-sm font-semibold text-[#e32028]">{serverError}</p>}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="flex flex-col gap-1.5">
                 <label className="text-[#888] text-xs font-semibold uppercase tracking-wide">Your Name</label>
                 <input
                   name="name" value={form.name} onChange={handle} required
                   placeholder="John Doe"
-                  className="bg-[#0d0d0d] border border-[#2a2a2a] rounded-lg px-4 py-2.5 text-white text-sm placeholder-[#444] focus:outline-none focus:border-[#e32028] transition-colors duration-200"
+                  className={`bg-[#0d0d0d] border rounded-lg px-4 py-2.5 text-white text-sm placeholder-[#444] focus:outline-none focus:border-[#e32028] transition-colors duration-200 ${errors.name ? "border-[#e32028]" : "border-[#2a2a2a]"}`}
                 />
+                {errors.name && <p className="text-xs font-semibold text-[#e32028]">{errors.name}</p>}
               </div>
               <div className="flex flex-col gap-1.5">
                 <label className="text-[#888] text-xs font-semibold uppercase tracking-wide">Phone Number</label>
                 <input
                   name="phone" value={form.phone} onChange={handle} required
                   placeholder="+91 98765 43210"
-                  className="bg-[#0d0d0d] border border-[#2a2a2a] rounded-lg px-4 py-2.5 text-white text-sm placeholder-[#444] focus:outline-none focus:border-[#e32028] transition-colors duration-200"
+                  className={`bg-[#0d0d0d] border rounded-lg px-4 py-2.5 text-white text-sm placeholder-[#444] focus:outline-none focus:border-[#e32028] transition-colors duration-200 ${errors.phone ? "border-[#e32028]" : "border-[#2a2a2a]"}`}
                 />
+                {errors.phone && <p className="text-xs font-semibold text-[#e32028]">{errors.phone}</p>}
               </div>
             </div>
 
@@ -87,19 +105,21 @@ function EnquiryModal({ onClose }) {
               <input
                 name="email" value={form.email} onChange={handle} required type="email"
                 placeholder="john@example.com"
-                className="bg-[#0d0d0d] border border-[#2a2a2a] rounded-lg px-4 py-2.5 text-white text-sm placeholder-[#444] focus:outline-none focus:border-[#e32028] transition-colors duration-200"
+                className={`bg-[#0d0d0d] border rounded-lg px-4 py-2.5 text-white text-sm placeholder-[#444] focus:outline-none focus:border-[#e32028] transition-colors duration-200 ${errors.email ? "border-[#e32028]" : "border-[#2a2a2a]"}`}
               />
+              {errors.email && <p className="text-xs font-semibold text-[#e32028]">{errors.email}</p>}
             </div>
 
             <div className="flex flex-col gap-1.5">
               <label className="text-[#888] text-xs font-semibold uppercase tracking-wide">Service Interested In</label>
               <select
                 name="service" value={form.service} onChange={handle}
-                className="bg-[#0d0d0d] border border-[#2a2a2a] rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-[#e32028] transition-colors duration-200 text-white"
+                className={`bg-[#0d0d0d] border rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-[#e32028] transition-colors duration-200 text-white ${errors.service ? "border-[#e32028]" : "border-[#2a2a2a]"}`}
               >
                 <option value="" className="text-[#444]">Select a service</option>
                 {services.map(s => <option key={s} value={s}>{s}</option>)}
               </select>
+              {errors.service && <p className="text-xs font-semibold text-[#e32028]">{errors.service}</p>}
             </div>
 
             <div className="flex flex-col gap-1.5">
@@ -107,18 +127,21 @@ function EnquiryModal({ onClose }) {
               <textarea
                 name="message" value={form.message} onChange={handle} rows={3}
                 placeholder="Tell us about your project..."
-                className="bg-[#0d0d0d] border border-[#2a2a2a] rounded-lg px-4 py-2.5 text-white text-sm placeholder-[#444] focus:outline-none focus:border-[#e32028] transition-colors duration-200 resize-none"
+                className={`bg-[#0d0d0d] border rounded-lg px-4 py-2.5 text-white text-sm placeholder-[#444] focus:outline-none focus:border-[#e32028] transition-colors duration-200 resize-none ${errors.message ? "border-[#e32028]" : "border-[#2a2a2a]"}`}
               />
+              {errors.message && <p className="text-xs font-semibold text-[#e32028]">{errors.message}</p>}
             </div>
 
             <button
               type="submit"
-              className="w-full bg-[#e32028] text-white py-3 rounded-lg font-semibold text-sm hover:bg-[#c41c22] transition-colors duration-200 shadow-[0_0_20px_rgba(227,32,40,0.3)] hover:shadow-[0_0_30px_rgba(227,32,40,0.5)] mt-1"
+              disabled={status === "sending" || status === "success"}
+              className={`w-full text-white py-3 rounded-lg font-semibold text-sm transition-colors duration-200 shadow-[0_0_20px_rgba(227,32,40,0.3)] hover:shadow-[0_0_30px_rgba(227,32,40,0.5)] mt-1 ${
+                status === "success" ? "bg-[#16a34a]" : "bg-[#e32028] hover:bg-[#c41c22]"
+              } ${status === "sending" ? "cursor-not-allowed opacity-70" : ""}`}
             >
-              Send Enquiry
+              {getSubmitLabel(status, "Send Enquiry")}
             </button>
-          </form>
-        )}
+        </form>
       </div>
 
       <style>{`
