@@ -1,4 +1,4 @@
-import dmImg from "../../../assets/services/digital-marketing.jpg";
+import dmImg from "../../../assets/img/services/digital-marketing.jpg";
 import LeadForm from "./LeadForm";
 
 const stats = [

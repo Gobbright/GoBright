@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from "react";
-import brandingImg from "../../../assets/services/branding.jpg";
-import marketingImg from "../../../assets/services/digital-marketing.jpg";
-import techImg from "../../../assets/services/tech.jpg";
-import photoImg from "../../../assets/services/photography.jpg";
-import otherImg from "../../../assets/services/other-services.jpg";
+import brandingImg from "../../../assets/img/services/branding.jpg";
+import marketingImg from "../../../assets/img/services/digital-marketing.jpg";
+import techImg from "../../../assets/img/services/tech.jpg";
+import photoImg from "../../../assets/img/services/photography.jpg";
+import otherImg from "../../../assets/img/services/other-services.jpg";
 
 const services = [
   {
@@ -143,8 +143,8 @@ export default function Services() {
                 onMouseLeave={() => setHovered(null)}
                 className="relative flex-shrink-0 cursor-pointer transition-all duration-400"
                 style={{
-                  width: isCenter ? "200px" : "168px",
-                  height: isCenter ? "270px" : "220px",
+                  width: isCenter ? "210px" : "178px",
+                  height: isCenter ? "330px" : "280px",
                   opacity: visible ? 1 : 0,
                   transform: visible
                     ? isHovered ? "scale(1.1) translateY(-8px)" : "scale(1) translateY(0)"
@@ -166,7 +166,10 @@ export default function Services() {
                 {/* Content */}
                 <div className="relative z-10 h-full flex flex-col items-center justify-between p-6 text-center">
                   {/* Image with red/gray treatment */}
-                  <div className="w-full h-28 rounded-xl overflow-hidden">
+                  <div
+                    className="w-full rounded-xl overflow-hidden"
+                    style={{ height: isCenter ? "158px" : "136px" }}
+                  >
                     <img
                       src={s.img}
                       alt={s.alt}

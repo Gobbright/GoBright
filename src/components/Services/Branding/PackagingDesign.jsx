@@ -1,4 +1,4 @@
-import packagingImg from "../../../assets/services/Packaging 2.png";
+import packagingImg from "../../../assets/img/services/Packaging 2.png";
 import BrandingForm from "./BrandingForm";
 
 const points = [

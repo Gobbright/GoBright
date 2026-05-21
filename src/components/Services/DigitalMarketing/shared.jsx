@@ -34,12 +34,16 @@ export function StarList({ title, points, children, className = "" }) {
   );
 }
 
-export function MediaBlock({ className = "", children }) {
+export function MediaBlock({ className = "", src = null, alt = "", children }) {
   return (
     <div className={`relative ${className}`}>
       <div className="absolute -right-6 top-[-46px] h-[240px] w-[88px] rounded-br-[44px] rounded-tr-[44px] bg-[#e32028]" />
-      <div className="relative z-10 flex min-h-[300px] items-center justify-center rounded-lg bg-[#d9d9d9] text-sm font-bold text-black shadow-[0_24px_70px_rgba(0,0,0,0.38)]">
-        {children}
+      <div className="relative z-10 flex min-h-[300px] items-center justify-center overflow-hidden rounded-lg bg-[#d9d9d9] text-sm font-bold text-black shadow-[0_24px_70px_rgba(0,0,0,0.38)]">
+        {src ? (
+          <img src={src} alt={alt} className="h-full min-h-[300px] w-full object-cover" />
+        ) : (
+          children
+        )}
       </div>
     </div>
   );

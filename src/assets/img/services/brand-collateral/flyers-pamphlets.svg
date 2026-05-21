@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 360">
+  <rect width="520" height="360" fill="#121212"/>
+  <rect x="146" y="58" width="182" height="238" rx="12" fill="#f4f4f4" transform="rotate(-8 237 177)"/>
+  <rect x="202" y="54" width="176" height="232" rx="12" fill="#eeeeee" transform="rotate(9 290 170)"/>
+  <rect x="222" y="86" width="124" height="58" rx="8" fill="#e32028" transform="rotate(9 284 115)"/>
+  <rect x="220" y="172" width="112" height="10" rx="5" fill="#191919" transform="rotate(9 276 177)"/>
+  <rect x="218" y="202" width="132" height="8" rx="4" fill="#888" transform="rotate(9 284 206)"/>
+  <text x="260" y="330" fill="#fff" font-family="Arial, sans-serif" font-size="24" font-weight="700" text-anchor="middle">Flyers &amp; Pamphlets</text>
+</svg>

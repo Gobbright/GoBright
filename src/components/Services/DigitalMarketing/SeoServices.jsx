@@ -1,4 +1,5 @@
 import { MediaBlock, RedHeading, SectionLabel, StarList } from "./shared";
+import seoImg from "../../../assets/img/whychoose/growth-analytics.jpg";
 
 const seoPoints = [
   "Comprehensive keyword research & global competitor analysis",
@@ -20,7 +21,7 @@ export default function SeoServices() {
           on Google & Drive Organic Traffic
         </RedHeading>
         <div className="mt-16 grid items-center gap-12 lg:grid-cols-[0.95fr_1fr]">
-          <MediaBlock />
+          <MediaBlock src={seoImg} alt="SEO growth analytics" />
           <div>
             <h3 className="text-xl font-extrabold text-white">
               Trusted Interior Company Serving Trichy

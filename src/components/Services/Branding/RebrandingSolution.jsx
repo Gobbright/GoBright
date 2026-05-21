@@ -1,4 +1,4 @@
-import rebrandingImg from "../../../assets/services/Untitled-3 3.png";
+import rebrandingImg from "../../../assets/img/services/Untitled-3 3.png";
 import BrandingForm from "./BrandingForm";
 
 const rebrandingPoints = [

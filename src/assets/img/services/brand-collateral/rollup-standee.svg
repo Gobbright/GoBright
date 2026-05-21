@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 360">
+  <rect width="520" height="360" fill="#121212"/>
+  <rect x="196" y="54" width="128" height="236" rx="12" fill="#f4f4f4"/>
+  <rect x="196" y="54" width="128" height="74" rx="12" fill="#e32028"/>
+  <rect x="222" y="156" width="76" height="12" rx="6" fill="#191919"/>
+  <rect x="218" y="190" width="84" height="8" rx="4" fill="#888"/>
+  <rect x="226" y="218" width="68" height="8" rx="4" fill="#aaa"/>
+  <rect x="172" y="290" width="176" height="14" rx="7" fill="#666"/>
+  <text x="260" y="330" fill="#fff" font-family="Arial, sans-serif" font-size="24" font-weight="700" text-anchor="middle">Roll-up Standee Design</text>
+</svg>

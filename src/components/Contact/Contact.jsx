@@ -11,8 +11,8 @@ const SERVICES = [
 ];
 
 const inputBase =
-  "bg-[#0d0d0d] border rounded-xl px-4 py-3 text-white text-sm placeholder-[#444] focus:outline-none transition-colors duration-200 w-full";
-const inputNormal = `${inputBase} border-[#2a2a2a] focus:border-[#e32028]`;
+  "bg-white border rounded-xl px-4 py-3 text-[#111] text-sm placeholder-[#8a8a8a] focus:outline-none transition-colors duration-200 w-full";
+const inputNormal = `${inputBase} border-[#d8d8d8] focus:border-[#e32028]`;
 const inputError  = `${inputBase} border-[#e32028]/70 focus:border-[#e32028]`;
 
 const contactInfo = [
@@ -155,7 +155,11 @@ export default function Contact() {
           <div className="scroll-fade-right">
             <h2 className="text-white text-2xl font-bold mb-6">Send a <span className="text-[#e32028]">Message</span></h2>
 
-            <form onSubmit={submit} noValidate className="flex flex-col gap-4">
+            <form
+              onSubmit={submit}
+              noValidate
+              className="flex flex-col gap-4 rounded-2xl border border-white/70 bg-white/85 p-6 shadow-[0_24px_70px_rgba(0,0,0,0.35)] backdrop-blur-md md:p-8"
+            >
 
               {/* Server error banner */}
               {status === "error" && serverError && (

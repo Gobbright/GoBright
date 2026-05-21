@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 360">
+  <rect width="520" height="360" fill="#121212"/>
+  <path d="M174 112l50-34 36 34 36-34 50 34-24 52-34-14v124H232V150l-34 14z" fill="#f4f4f4"/>
+  <circle cx="260" cy="154" r="26" fill="#e32028"/>
+  <rect x="98" y="216" width="90" height="58" rx="12" fill="#e32028"/>
+  <rect x="342" y="206" width="82" height="68" rx="12" fill="#eeeeee"/>
+  <rect x="364" y="232" width="38" height="8" rx="4" fill="#191919"/>
+  <text x="260" y="330" fill="#fff" font-family="Arial, sans-serif" font-size="22" font-weight="700" text-anchor="middle">Corporate Merchandise Design</text>
+</svg>

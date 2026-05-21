@@ -1,4 +1,4 @@
-import brandingImg from "../../../assets/services/1 21.png";
+import brandingImg from "../../../assets/img/services/1 21.png";
 import BrandingForm from "./BrandingForm";
 
 const strategyPoints = [

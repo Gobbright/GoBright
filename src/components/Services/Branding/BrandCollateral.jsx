@@ -1,4 +1,18 @@
-import brandingImg from "../../../assets/services/branding.jpg";
+import brandingImg from "../../../assets/img/services/branding.jpg";
+import businessCardImg from "../../../assets/img/services/brand-collateral/business-card.svg";
+import letterheadImg from "../../../assets/img/services/brand-collateral/letterhead.svg";
+import envelopeImg from "../../../assets/img/services/brand-collateral/envelope.svg";
+import idCardImg from "../../../assets/img/services/brand-collateral/id-card.svg";
+import emailSignatureImg from "../../../assets/img/services/brand-collateral/email-signature.svg";
+import brochureImg from "../../../assets/img/services/brand-collateral/brochure-profile.svg";
+import flyersImg from "../../../assets/img/services/brand-collateral/flyers-pamphlets.svg";
+import postersImg from "../../../assets/img/services/brand-collateral/posters-banners.svg";
+import catalogueImg from "../../../assets/img/services/brand-collateral/product-catalogue.svg";
+import presentationImg from "../../../assets/img/services/brand-collateral/presentation-deck.svg";
+import officeBrandingImg from "../../../assets/img/services/brand-collateral/office-branding.svg";
+import exhibitionStallImg from "../../../assets/img/services/brand-collateral/exhibition-stall.svg";
+import standeeImg from "../../../assets/img/services/brand-collateral/rollup-standee.svg";
+import merchandiseImg from "../../../assets/img/services/brand-collateral/corporate-merchandise.svg";
 import BrandingForm from "./BrandingForm";
 
 const benefits = [
@@ -9,26 +23,26 @@ const benefits = [
 ];
 
 const services = [
-  "Business Card Design",
-  "Letterhead Design",
-  "Envelope Design",
-  "ID Card Design",
-  "Email Signature Design",
+  { title: "Business Card Design", img: businessCardImg },
+  { title: "Letterhead Design", img: letterheadImg },
+  { title: "Envelope Design", img: envelopeImg },
+  { title: "ID Card Design", img: idCardImg },
+  { title: "Email Signature Design", img: emailSignatureImg },
 ];
 
 const marketingMaterials = [
-  "Brochure & Company Profile Design",
-  "Flyers & Pamphlets",
-  "Posters & Banners",
-  "Product Catalogue",
-  "Presentation Deck Design",
+  { title: "Brochure & Company Profile Design", img: brochureImg },
+  { title: "Flyers & Pamphlets", img: flyersImg },
+  { title: "Posters & Banners", img: postersImg },
+  { title: "Product Catalogue", img: catalogueImg },
+  { title: "Presentation Deck Design", img: presentationImg },
 ];
 
 const corporateMaterials = [
-  "Office Branding Graphics",
-  "Exhibition Stall Design",
-  "Roll-up Standee Design",
-  "Corporate Merchandise Design",
+  { title: "Office Branding Graphics", img: officeBrandingImg },
+  { title: "Exhibition Stall Design", img: exhibitionStallImg },
+  { title: "Roll-up Standee Design", img: standeeImg },
+  { title: "Corporate Merchandise Design", img: merchandiseImg },
 ];
 
 const corporateMaterialSpans = [
@@ -46,14 +60,22 @@ const growthPoints = [
   "Enhances overall customer experience",
 ];
 
-function MaterialCard({ title, wide = false, className = "" }) {
+function MaterialCard({ title, img, wide = false, className = "" }) {
   return (
     <article
-      className={`group flex w-full items-end justify-center rounded-md bg-[#d8d8d8] px-4 pb-5 text-center text-xs font-bold text-black transition duration-300 hover:-translate-y-1 hover:bg-[#eeeeee] ${
+      className={`group relative flex w-full items-end justify-center overflow-hidden rounded-md bg-[#171717] px-4 pb-5 text-center text-xs font-bold text-white shadow-[0_18px_45px_rgba(0,0,0,0.28)] transition duration-300 hover:-translate-y-1 ${
         wide ? "min-h-[260px]" : "min-h-[255px] max-w-[260px]"
       } ${className}`}
     >
-      <h5>{title}</h5>
+      <img
+        src={img}
+        alt={title}
+        className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105"
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-black/10" />
+      <h5 className="relative z-10 max-w-[92%] rounded-sm bg-black/35 px-3 py-2 leading-5 backdrop-blur-[2px]">
+        {title}
+      </h5>
     </article>
   );
 }
@@ -134,13 +156,13 @@ export default function BrandCollateral() {
 
           <div className="mx-auto mt-10 grid max-w-5xl grid-cols-1 justify-items-center gap-x-14 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
             {services.slice(0, 3).map((service) => (
-              <MaterialCard key={service} title={service} />
+              <MaterialCard key={service.title} title={service.title} img={service.img} />
             ))}
           </div>
 
           <div className="mx-auto mt-12 grid max-w-3xl grid-cols-1 justify-items-center gap-x-16 gap-y-12 sm:grid-cols-2">
             {services.slice(3).map((service) => (
-              <MaterialCard key={service} title={service} />
+              <MaterialCard key={service.title} title={service.title} img={service.img} />
             ))}
           </div>
 
@@ -156,13 +178,13 @@ export default function BrandCollateral() {
 
           <div className="mx-auto mt-10 grid max-w-3xl grid-cols-1 justify-items-center gap-x-16 gap-y-12 sm:grid-cols-2">
             {marketingMaterials.slice(0, 2).map((service) => (
-              <MaterialCard key={service} title={service} />
+              <MaterialCard key={service.title} title={service.title} img={service.img} />
             ))}
           </div>
 
           <div className="mx-auto mt-12 grid max-w-5xl grid-cols-1 justify-items-center gap-x-14 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
             {marketingMaterials.slice(2).map((service) => (
-              <MaterialCard key={service} title={service} />
+              <MaterialCard key={service.title} title={service.title} img={service.img} />
             ))}
           </div>
 
@@ -179,8 +201,9 @@ export default function BrandCollateral() {
           <div className="mx-auto mt-10 grid max-w-5xl grid-cols-1 gap-5 md:grid-cols-5">
             {corporateMaterials.map((service, index) => (
               <MaterialCard
-                key={service}
-                title={service}
+                key={service.title}
+                title={service.title}
+                img={service.img}
                 wide
                 className={corporateMaterialSpans[index]}
               />

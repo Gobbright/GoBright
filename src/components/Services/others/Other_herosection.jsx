@@ -1,4 +1,4 @@
-import amico from "../../../assets/About/amico.png";
+import amico from "../../../assets/img/About/amico.png";
 
 const accessControlItems = [
   "Biometric fingerprint access systems",

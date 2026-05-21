@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/img/logo.png";
 import { getSubmitLabel, sendContactLead, validateLead } from "../../lib/contactApi";
 
 const services = [
@@ -50,7 +50,7 @@ function EnquiryModal({ onClose }) {
 
   return (
     <div
-      className="fixed inset-0 z-[100] flex items-center justify-center px-4"
+      className="fixed inset-0 z-[100] flex items-end sm:items-center justify-center px-4 pb-0 sm:pb-4"
       onClick={onClose}
     >
       {/* Backdrop */}
@@ -58,84 +58,84 @@ function EnquiryModal({ onClose }) {
 
       {/* Modal */}
       <div
-        className="relative bg-[#161616] border border-[#2a2a2a] rounded-2xl w-full max-w-lg shadow-[0_0_60px_rgba(227,32,40,0.15)] animate-[fadeSlideUp_0.3s_ease]"
+        className="relative bg-[#161616] border border-[#2a2a2a] rounded-t-2xl sm:rounded-2xl w-full max-w-sm max-h-[90vh] overflow-y-auto shadow-[0_0_60px_rgba(227,32,40,0.15)] animate-[fadeSlideUp_0.3s_ease]"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
-        <div className="flex items-center justify-between px-6 pt-6 pb-4 border-b border-[#2a2a2a]">
+        <div className="flex items-center justify-between px-4 pt-4 pb-3 border-b border-[#2a2a2a]">
           <div>
-            <h3 className="text-white text-lg font-bold">Quick Enquiry</h3>
-            <p className="text-[#666] text-xs mt-0.5">We'll get back to you within 24 hours</p>
+            <h3 className="text-white text-sm font-bold">Quick Enquiry</h3>
+            <p className="text-[#666] text-[11px] mt-0.5">We'll get back to you within 24 hours</p>
           </div>
           <button
             onClick={onClose}
-            className="w-8 h-8 rounded-full border border-[#333] flex items-center justify-center text-[#666] hover:border-[#e32028] hover:text-[#e32028] transition-colors duration-200"
+            className="w-7 h-7 rounded-full border border-[#333] flex items-center justify-center text-[#666] hover:border-[#e32028] hover:text-[#e32028] transition-colors duration-200"
           >
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <svg width="12" height="12" viewBox="0 0 14 14" fill="none">
               <path d="M2 2l10 10M12 2L2 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
             </svg>
           </button>
         </div>
 
-        <form onSubmit={submit} className="px-6 py-5 flex flex-col gap-4">
-            {serverError && <p className="rounded-lg bg-[#e32028]/10 px-3 py-2 text-sm font-semibold text-[#e32028]">{serverError}</p>}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="flex flex-col gap-1.5">
-                <label className="text-[#888] text-xs font-semibold uppercase tracking-wide">Your Name</label>
+        <form onSubmit={submit} className="px-4 py-3 flex flex-col gap-2.5">
+            {serverError && <p className="rounded-lg bg-[#e32028]/10 px-3 py-1.5 text-xs font-semibold text-[#e32028]">{serverError}</p>}
+            <div className="grid grid-cols-2 gap-2.5">
+              <div className="flex flex-col gap-1">
+                <label className="text-[#888] text-[10px] font-semibold uppercase tracking-wide">Your Name</label>
                 <input
                   name="name" value={form.name} onChange={handle} required
                   placeholder="John Doe"
-                  className={`bg-[#0d0d0d] border rounded-lg px-4 py-2.5 text-white text-sm placeholder-[#444] focus:outline-none focus:border-[#e32028] transition-colors duration-200 ${errors.name ? "border-[#e32028]" : "border-[#2a2a2a]"}`}
+                  className={`bg-[#0d0d0d] border rounded-md px-3 py-2 text-white text-xs placeholder-[#444] focus:outline-none focus:border-[#e32028] transition-colors duration-200 ${errors.name ? "border-[#e32028]" : "border-[#2a2a2a]"}`}
                 />
-                {errors.name && <p className="text-xs font-semibold text-[#e32028]">{errors.name}</p>}
+                {errors.name && <p className="text-[10px] font-semibold text-[#e32028]">{errors.name}</p>}
               </div>
-              <div className="flex flex-col gap-1.5">
-                <label className="text-[#888] text-xs font-semibold uppercase tracking-wide">Phone Number</label>
+              <div className="flex flex-col gap-1">
+                <label className="text-[#888] text-[10px] font-semibold uppercase tracking-wide">Phone</label>
                 <input
                   name="phone" value={form.phone} onChange={handle} required
                   placeholder="+91 98765 43210"
-                  className={`bg-[#0d0d0d] border rounded-lg px-4 py-2.5 text-white text-sm placeholder-[#444] focus:outline-none focus:border-[#e32028] transition-colors duration-200 ${errors.phone ? "border-[#e32028]" : "border-[#2a2a2a]"}`}
+                  className={`bg-[#0d0d0d] border rounded-md px-3 py-2 text-white text-xs placeholder-[#444] focus:outline-none focus:border-[#e32028] transition-colors duration-200 ${errors.phone ? "border-[#e32028]" : "border-[#2a2a2a]"}`}
                 />
-                {errors.phone && <p className="text-xs font-semibold text-[#e32028]">{errors.phone}</p>}
+                {errors.phone && <p className="text-[10px] font-semibold text-[#e32028]">{errors.phone}</p>}
               </div>
             </div>
 
-            <div className="flex flex-col gap-1.5">
-              <label className="text-[#888] text-xs font-semibold uppercase tracking-wide">Email Address</label>
+            <div className="flex flex-col gap-1">
+              <label className="text-[#888] text-[10px] font-semibold uppercase tracking-wide">Email</label>
               <input
                 name="email" value={form.email} onChange={handle} required type="email"
                 placeholder="john@example.com"
-                className={`bg-[#0d0d0d] border rounded-lg px-4 py-2.5 text-white text-sm placeholder-[#444] focus:outline-none focus:border-[#e32028] transition-colors duration-200 ${errors.email ? "border-[#e32028]" : "border-[#2a2a2a]"}`}
+                className={`bg-[#0d0d0d] border rounded-md px-3 py-2 text-white text-xs placeholder-[#444] focus:outline-none focus:border-[#e32028] transition-colors duration-200 ${errors.email ? "border-[#e32028]" : "border-[#2a2a2a]"}`}
               />
-              {errors.email && <p className="text-xs font-semibold text-[#e32028]">{errors.email}</p>}
+              {errors.email && <p className="text-[10px] font-semibold text-[#e32028]">{errors.email}</p>}
             </div>
 
-            <div className="flex flex-col gap-1.5">
-              <label className="text-[#888] text-xs font-semibold uppercase tracking-wide">Service Interested In</label>
+            <div className="flex flex-col gap-1">
+              <label className="text-[#888] text-[10px] font-semibold uppercase tracking-wide">Service</label>
               <select
                 name="service" value={form.service} onChange={handle}
-                className={`bg-[#0d0d0d] border rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-[#e32028] transition-colors duration-200 text-white ${errors.service ? "border-[#e32028]" : "border-[#2a2a2a]"}`}
+                className={`bg-[#0d0d0d] border rounded-md px-3 py-2 text-xs focus:outline-none focus:border-[#e32028] transition-colors duration-200 text-white ${errors.service ? "border-[#e32028]" : "border-[#2a2a2a]"}`}
               >
                 <option value="" className="text-[#444]">Select a service</option>
                 {services.map(s => <option key={s} value={s}>{s}</option>)}
               </select>
-              {errors.service && <p className="text-xs font-semibold text-[#e32028]">{errors.service}</p>}
+              {errors.service && <p className="text-[10px] font-semibold text-[#e32028]">{errors.service}</p>}
             </div>
 
-            <div className="flex flex-col gap-1.5">
-              <label className="text-[#888] text-xs font-semibold uppercase tracking-wide">Message</label>
+            <div className="flex flex-col gap-1">
+              <label className="text-[#888] text-[10px] font-semibold uppercase tracking-wide">Message</label>
               <textarea
-                name="message" value={form.message} onChange={handle} rows={3}
+                name="message" value={form.message} onChange={handle} rows={2}
                 placeholder="Tell us about your project..."
-                className={`bg-[#0d0d0d] border rounded-lg px-4 py-2.5 text-white text-sm placeholder-[#444] focus:outline-none focus:border-[#e32028] transition-colors duration-200 resize-none ${errors.message ? "border-[#e32028]" : "border-[#2a2a2a]"}`}
+                className={`bg-[#0d0d0d] border rounded-md px-3 py-2 text-white text-xs placeholder-[#444] focus:outline-none focus:border-[#e32028] transition-colors duration-200 resize-none ${errors.message ? "border-[#e32028]" : "border-[#2a2a2a]"}`}
               />
-              {errors.message && <p className="text-xs font-semibold text-[#e32028]">{errors.message}</p>}
+              {errors.message && <p className="text-[10px] font-semibold text-[#e32028]">{errors.message}</p>}
             </div>
 
             <button
               type="submit"
               disabled={status === "sending" || status === "success"}
-              className={`w-full text-white py-3 rounded-lg font-semibold text-sm transition-colors duration-200 shadow-[0_0_20px_rgba(227,32,40,0.3)] hover:shadow-[0_0_30px_rgba(227,32,40,0.5)] mt-1 ${
+              className={`w-full text-white py-2 rounded-md font-semibold text-xs transition-colors duration-200 shadow-[0_0_20px_rgba(227,32,40,0.3)] hover:shadow-[0_0_30px_rgba(227,32,40,0.5)] mt-0.5 ${
                 status === "success" ? "bg-[#16a34a]" : "bg-[#e32028] hover:bg-[#c41c22]"
               } ${status === "sending" ? "cursor-not-allowed opacity-70" : ""}`}
             >
@@ -272,7 +272,7 @@ export default function Header() {
 
           {/* Nav */}
           <nav
-            className={`${menuOpen ? "flex" : "hidden"} md:flex flex-col md:flex-row items-start md:items-center gap-0 md:gap-8
+            className={`${menuOpen ? "flex" : "hidden"} md:flex flex-col md:flex-row items-center gap-0 md:gap-8
             absolute md:static top-[70px] left-0 right-0 md:top-auto
             bg-[#0d0d0d] md:bg-transparent border-t md:border-t-0 border-[#1a1a1a]
             px-6 md:px-0 pb-4 md:pb-0 z-50`}

@@ -1,17 +1,25 @@
 import { useRef, useState, useEffect } from "react";
+import teamMember1 from "../../../assets/img/teams/1.jpeg";
+import teamMember2 from "../../../assets/img/teams/2.png";
+import teamMember3 from "../../../assets/img/teams/3.png";
+import teamMember4 from "../../../assets/img/teams/4.png";
+import teamMember5 from "../../../assets/img/teams/5.png";
+import teamMember6 from "../../../assets/img/teams/6.png";
+import teamMember7 from "../../../assets/img/teams/7.jpeg";
+import teamMember8 from "../../../assets/img/teams/8.jpeg";
+import teamMember9 from "../../../assets/img/teams/9.jpeg";
 
-// Replace src with actual images when ready — 10 members, 5 per row × 2 rows
+// Change order here to reposition members
 const members = [
-  { name: "Team Member", role: "Designation", img: null },
-  { name: "Team Member", role: "Designation", img: null },
-  { name: "Team Member", role: "Designation", img: null },
-  { name: "Team Member", role: "Designation", img: null },
-  { name: "Team Member", role: "Designation", img: null },
-  { name: "Team Member", role: "Designation", img: null },
-  { name: "Team Member", role: "Designation", img: null },
-  { name: "Team Member", role: "Designation", img: null },
-  { name: "Team Member", role: "Designation", img: null },
-  { name: "Team Member", role: "Designation", img: null },
+  { name: "GoBright Team", role: "Creative & Growth Team", img: teamMember1 },
+  { name: "GoBright Team", role: "Branding & Marketing Team", img: teamMember2 },
+  { name: "GoBright Team", role: "Digital Strategy Team", img: teamMember3 },
+  { name: "GoBright Team", role: "Design & Content Team", img: teamMember4 },
+  { name: "GoBright Team", role: "Technology Team", img: teamMember5 },
+  { name: "GoBright Team", role: "Performance Team", img: teamMember6 },
+  { name: "GoBright Team", role: "Client Success Team", img: teamMember7 },
+  { name: "GoBright Team", role: "Production Team", img: teamMember8 },
+  { name: "GoBright Team", role: "Strategy Team", img: teamMember9 },
 ];
 
 function AvatarPlaceholder() {
@@ -43,7 +51,7 @@ export default function Team() {
   }, []);
 
   return (
-    <section ref={ref} className="bg-[#0d0d0d] py-20 border-t border-[#1a1a1a] overflow-hidden relative">
+    <section ref={ref} className="bg-[#0d0d0d] py-14 border-t border-[#1a1a1a] overflow-hidden relative">
 
       {/* Red glow */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_50%,rgba(227,32,40,0.07),transparent_65%)] pointer-events-none" />
@@ -74,7 +82,7 @@ export default function Team() {
         }}
       />
 
-      <div className="relative z-10 w-full px-4 sm:px-10 md:px-16">
+      <div className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-10 md:px-16">
 
         {/* Heading */}
         <div
@@ -93,7 +101,7 @@ export default function Team() {
         </div>
 
         {/* Cards grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 sm:gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8">
           {members.map((m, i) => (
             <div
               key={i}
@@ -123,7 +131,6 @@ export default function Team() {
               {/* Name & role */}
               <div className="mt-3 text-center">
                 <p className="text-white text-sm font-semibold group-hover:text-[#e32028] transition-colors duration-300">{m.name}</p>
-                <p className="text-[#555] text-xs mt-0.5">{m.role}</p>
               </div>
             </div>
           ))}

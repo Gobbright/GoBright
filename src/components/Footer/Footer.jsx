@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/img/logo.png";
 import { getSubmitLabel, sendContactLead, validateLead } from "../../lib/contactApi";
 
 const navPrimary = [

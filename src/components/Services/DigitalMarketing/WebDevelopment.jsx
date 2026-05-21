@@ -1,4 +1,5 @@
 import { MediaBlock, RedHeading, SectionLabel, StarList } from "./shared";
+import webImg from "../../../assets/img/services/tech.jpg";
 
 const build = [
   "SEO-optimized business websites",
@@ -32,7 +33,7 @@ export default function WebDevelopment() {
           scalable websites. We create strategic digital platforms that not only look
           professional but also generate consistent leads, enquiries, and revenue.
         </p>
-        <MediaBlock className="mt-14" />
+        <MediaBlock className="mt-14" src={webImg} alt="Web development workspace" />
         <div className="mt-16 grid gap-12 lg:grid-cols-2">
           <StarList title="We Build :" points={build} />
           <StarList title="Every Website is :" points={qualities} />

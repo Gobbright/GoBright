@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 360">
+  <rect width="520" height="360" fill="#121212"/>
+  <rect x="188" y="44" width="144" height="246" rx="18" fill="#f4f4f4"/>
+  <rect x="188" y="44" width="144" height="52" rx="18" fill="#e32028"/>
+  <circle cx="260" cy="144" r="38" fill="#e32028"/>
+  <rect x="220" y="202" width="80" height="10" rx="5" fill="#191919"/>
+  <rect x="214" y="226" width="92" height="8" rx="4" fill="#888"/>
+  <rect x="226" y="250" width="68" height="8" rx="4" fill="#aaa"/>
+  <rect x="238" y="26" width="44" height="18" rx="9" fill="#666"/>
+  <text x="260" y="330" fill="#fff" font-family="Arial, sans-serif" font-size="24" font-weight="700" text-anchor="middle">ID Card Design</text>
+</svg>

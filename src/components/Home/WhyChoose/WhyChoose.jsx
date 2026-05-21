@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
-import icon1 from "../../../assets/whychoose/icon-1.png";
-import icon2 from "../../../assets/whychoose/icon-2.png";
-import icon3 from "../../../assets/whychoose/icon-3.png";
+import icon1 from "../../../assets/img/whychoose/icon-1.png";
+import icon2 from "../../../assets/img/whychoose/icon-2.png";
+import icon3 from "../../../assets/img/whychoose/icon-3.png";
 
 const features = [
   {

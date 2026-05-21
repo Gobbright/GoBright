@@ -1,4 +1,4 @@
-import welcomeKitImg from "../../../assets/services/2024-12-10 1.png";
+import welcomeKitImg from "../../../assets/img/services/2024-12-10 1.png";
 import BrandingForm from "./BrandingForm";
 
 const points = [

@@ -1,5 +1,5 @@
-// import wwaImg from "../assets/wwa.png";
-import amico from "../../assets/About/amico.png";
+// import wwaImg from "../assets/img/wwa.png";
+import amico from "../../assets/img/About/amico.png";
 
 const bullets = [
   "Industry behavior",
@@ -23,6 +23,9 @@ function StarIcon() {
 }
 
 export default function Wwa() {
+  // Professional image for Who We Are section
+  const wwaImage = amico;
+
   return (
     <section className="bg-[#0d0d0d] overflow-hidden relative">
 

@@ -1,6 +1,9 @@
-import amico from "../../assets/About/amico.png";
+import amico from "../../assets/img/About/amico.png";
 
 export default function HeroSection() {
+  // Professional hero image for About section
+  const heroImage = amico;
+
   return (
     <section className="bg-[#0d0d0d] pt-10 relative overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgba(227,32,40,0.11),transparent_55%)] pointer-events-none" />
@@ -55,7 +58,7 @@ export default function HeroSection() {
         {/* Right — illustration */}
         <div className="flex justify-center">
           <img
-            src={amico}
+            src={heroImage}
             alt="GoBright team illustration"
             className="w-full max-w-md object-contain"
           />

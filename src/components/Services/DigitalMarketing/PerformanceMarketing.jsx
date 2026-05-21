@@ -1,4 +1,5 @@
 import { MediaBlock, RedHeading, SectionLabel, StarList } from "./shared";
+import performanceImg from "../../../assets/img/whychoose/performance.jpg";
 
 const services = [
   "Strategic lead generation campaigns",
@@ -41,7 +42,7 @@ export default function PerformanceMarketing() {
             and directly contribute to your business growth.
           </p>
         </div>
-        <MediaBlock className="mt-14" />
+        <MediaBlock className="mt-14" src={performanceImg} alt="Performance marketing analytics" />
         <div className="mt-16 grid gap-12 lg:grid-cols-2">
           <StarList title="Our performance marketing services include:" points={services}>
             We don't just run advertisements - we create structured marketing funnels

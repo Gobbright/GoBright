@@ -1,9 +1,9 @@
-import c0 from "../../../assets/clients/clients.png";
-import c1 from "../../../assets/clients/clients1.webp";
-import c2 from "../../../assets/clients/clients2.png";
-import c3 from "../../../assets/clients/clients3.png";
-import c4 from "../../../assets/clients/clients4.png";
-import c5 from "../../../assets/clients/clients5.png";
+import c0 from "../../../assets/img/clients/clients.png";
+import c1 from "../../../assets/img/clients/clients1.webp";
+import c2 from "../../../assets/img/clients/clients2.png";
+import c3 from "../../../assets/img/clients/clients3.png";
+import c4 from "../../../assets/img/clients/clients4.png";
+import c5 from "../../../assets/img/clients/clients5.png";
 
 const clients = [
   { img: c0, alt: "Jayaraj — GoBright client"            },

@@ -1,4 +1,4 @@
-import logo from "./assets/logo.png";
+import logo from "./assets/img/logo.png";
 
 const navPrimary = ["Home", "Services", "Contact us"];
 const navSecondary = ["About us", "Terms and Conditions", "Privacy Policy", "Refund Policy"];

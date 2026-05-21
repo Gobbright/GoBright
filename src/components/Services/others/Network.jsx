@@ -1,4 +1,4 @@
-import cctv from "../../../assets/services/other-services.jpg";
+import cctv from "../../../assets/img/services/other-services.jpg";
 
 const solutionItems = [
   "HD & 4K CCTV cameras",

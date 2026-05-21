@@ -1,4 +1,4 @@
-import socialImg from "../../../assets/services/Digital-Marketing/GMG 1080 x 1080 1.png";
+import socialImg from "../../../assets/img/services/Digital-Marketing/GMG 1080 x 1080 1.png";
 import LeadForm from "./LeadForm";
 import { MediaBlock, RedHeading, SectionLabel, StarList } from "./shared";
 
@@ -73,7 +73,7 @@ export default function SocialMediaMarketing() {
         </div>
 
         <div className="mt-24 grid items-center gap-12 lg:grid-cols-[1fr_0.95fr]">
-          <MediaBlock />
+          <MediaBlock src={socialImg} alt="Social media advertising campaign" />
           <div>
             <h3 className="text-xl font-extrabold text-[#e32028]">
               Social Media Advertising & Lead Generation

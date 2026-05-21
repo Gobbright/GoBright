@@ -1,4 +1,4 @@
-import logoVariants from "../../../assets/services/Logo varients 4.png";
+import logoVariants from "../../../assets/img/services/Logo varients 4.png";
 import BrandingForm from "./BrandingForm";
 
 const offerPoints = [

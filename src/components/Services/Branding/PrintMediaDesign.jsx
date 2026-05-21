@@ -1,4 +1,4 @@
-import signageImg from "../../../assets/services/2024-12-11 1.png";
+import signageImg from "../../../assets/img/services/2024-12-11 1.png";
 import BrandingForm from "./BrandingForm";
 
 const signagePoints = [

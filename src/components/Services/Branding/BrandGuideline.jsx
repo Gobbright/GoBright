@@ -1,4 +1,4 @@
-import guidelineImg from "../../../assets/services/Untitled-2 2.png";
+import guidelineImg from "../../../assets/img/services/Untitled-2 2.png";
 import BrandingForm from "./BrandingForm";
 
 const guidelinePoints = [

@@ -1,4 +1,5 @@
 import { MediaBlock, RedHeading, SectionLabel, StarList } from "./shared";
+import brandingImg from "../../../assets/img/services/branding.jpg";
 
 const points = [
   "Profile optimization",
@@ -27,7 +28,7 @@ export default function PersonalBranding() {
         </p>
         <div className="mt-16 grid items-center gap-12 lg:grid-cols-2">
           <StarList title="Our personal branding services include:" points={points} />
-          <MediaBlock />
+          <MediaBlock src={brandingImg} alt="Personal branding strategy" />
         </div>
       </div>
     </section>

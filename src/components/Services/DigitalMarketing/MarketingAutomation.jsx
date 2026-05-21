@@ -1,4 +1,5 @@
 import { MediaBlock, RedHeading, SectionLabel, StarList } from "./shared";
+import automationImg from "../../../assets/img/whychoose/data-branding.jpg";
 
 const workflows = [
   "Capture and organize leads automatically from multiple channels",
@@ -41,7 +42,7 @@ export default function MarketingAutomation() {
               predictable revenue flow.
             </p>
           </div>
-          <MediaBlock />
+          <MediaBlock src={automationImg} alt="Marketing automation workflow" />
         </div>
         <div className="mt-16 grid gap-12 lg:grid-cols-2">
           <StarList title="We build intelligent automation workflows that :" points={workflows}>

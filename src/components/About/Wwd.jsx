@@ -1,4 +1,4 @@
-import Mask from "../../assets/About/amico.png";
+import Mask from "../../assets/img/About/amico.png";
 
 const bullets = [
   { text: "Brand Strategy & Identity Development", bold: false },
@@ -22,6 +22,9 @@ function StarIcon() {
 }
 
 export default function Wwd() {
+  // Professional image for What We Do section
+  const wwdImage = Mask;
+
   return (
     <section className="bg-[#0d0d0d] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-8 py-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-stretch">
