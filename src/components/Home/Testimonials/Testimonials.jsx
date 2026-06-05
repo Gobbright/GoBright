@@ -1,12 +1,14 @@
-import { useState, useEffect, useRef } from "react";
+﻿import { useState, useEffect, useRef } from "react";
 
-const testimonials = [
+const API = import.meta.env.VITE_ATTENDANCE_API_URL || "http://localhost:5001/api";
+
+const STATIC_TESTIMONIALS = [
   { name: "Ramesh Kumar",  role: "Founder, Jayaraj Enterprises", rating: 5, review: "GoBright completely transformed how our brand is perceived. The team understood our legacy and modernized our identity without losing what makes us unique. Exceptional work from start to finish." },
   { name: "Priya Nair",   role: "CEO, Namma Trip",              rating: 5, review: "Working with GoBright was a game-changer for us. Our digital presence went from invisible to impactful within weeks. Their creativity, strategy, and attention to detail is unmatched in Trichy." },
   { name: "Arun Selvam",  role: "Director, Ivory Code",         rating: 5, review: "The GoBright team delivered a brand identity that truly reflects who we are as a tech company. Clean, modern, and powerful. We've received so many compliments from our clients since the rebrand." },
   { name: "Karthik Rajan",role: "MD, GSKT Construction",        rating: 5, review: "From brand strategy to signage installation, GoBright handled everything professionally. Our new brand image has significantly improved client trust and project conversions." },
   { name: "Deepa Mohan",  role: "Owner, Sri Vel Enterprises",   rating: 5, review: "I was skeptical about investing in branding, but GoBright proved its worth within the first month. Our social media engagement tripled and inquiries have been consistent ever since." },
-  { name: "Vijay Anand",  role: "Startup Founder, Trichy",      rating: 5, review: "GoBright didn't just design a logo — they built an entire brand system for us. The guidelines, assets, and strategy they provided set us up for long-term success. Highly recommended!" },
+  { name: "Vijay Anand",  role: "Startup Founder, Trichy",      rating: 5, review: "GoBright didn't just design a logo - they built an entire brand system for us. The guidelines, assets, and strategy they provided set us up for long-term success. Highly recommended!" },
 ];
 
 function Stars({ count }) {
@@ -38,11 +40,28 @@ function ArrowBtn({ dir, onClick }) {
 }
 
 export default function Testimonials() {
-  const [current, setCurrent] = useState(0);
-  const [animDir, setAnimDir] = useState(null);
-  const [visible, setVisible] = useState(false);
+  const [current, setCurrent]       = useState(0);
+  const [animDir, setAnimDir]       = useState(null);
+  const [visible, setVisible]       = useState(false);
+  const [testimonials, setTestimonials] = useState(STATIC_TESTIMONIALS);
   const ref = useRef(null);
   const total = testimonials.length;
+
+  useEffect(() => {
+    fetch(`${API}/website/review`)
+      .then(r => r.json())
+      .then(d => {
+        if (d.items && d.items.length > 0) {
+          setTestimonials(d.items.map(rv => ({
+            name:   rv.name,
+            role:   rv.role || "",
+            rating: rv.rating || 5,
+            review: rv.text || "",
+          })));
+        }
+      })
+      .catch(() => {});
+  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -160,7 +179,7 @@ export default function Testimonials() {
           </div>
         </div>
 
-        {/* Controls — arrows + dots */}
+        {/* Controls - arrows + dots */}
         <div className="flex items-center justify-center gap-5 mt-10">
           <ArrowBtn dir="left" onClick={goPrev} />
 

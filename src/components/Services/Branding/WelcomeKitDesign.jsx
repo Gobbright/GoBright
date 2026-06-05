@@ -1,5 +1,4 @@
 import welcomeKitImg from "../../../assets/img/services/2024-12-10 1.png";
-import BrandingForm from "./BrandingForm";
 
 const points = [
   "Office wall branding",
@@ -61,18 +60,6 @@ export default function WelcomeKitDesign() {
             </div>
           </div>
 
-          {/* \u2500\u2500 Enquiry Form \u2500\u2500 */}
-          <div className="mt-16 grid gap-12 px-6 md:px-10 items-center lg:grid-cols-[1fr_520px]">
-            <div>
-              <h3 className="text-2xl font-extrabold text-white leading-tight">
-                Brand Your <span className="text-[#e32028]">Office Space?</span>
-              </h3>
-              <p className="mt-4 text-base font-medium leading-7 text-[#aaa] max-w-md">
-                Create a workspace that reflects your brand's values and culture. GoBright delivers end-to-end office interior branding in Trichy.
-              </p>
-            </div>
-            <BrandingForm />
-          </div>
         </div>
       </div>
     </section>

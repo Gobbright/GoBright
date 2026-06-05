@@ -1,17 +1,17 @@
-import { useState, useEffect, useRef } from "react";
+﻿import { useState, useEffect, useRef } from "react";
 
 const faqs = [
   {
     q: "What is branding and why is it important?",
-    a: (<><span className="text-[#e32028] font-semibold">Branding</span> is the process of creating a strong, unique identity for your business in the minds of your customers. It goes beyond logos and colors — it defines how people feel, think, and trust your brand. Strong branding builds credibility, recognition, emotional connection, and long-term business growth.</>),
+    a: (<><span className="text-[#e32028] font-semibold">Branding</span> is the process of creating a strong, unique identity for your business in the minds of your customers. It goes beyond logos and colors - it defines how people feel, think, and trust your brand. Strong branding builds credibility, recognition, emotional connection, and long-term business growth.</>),
   },
   {
     q: "How long does the branding process take?",
-    a: "The branding timeline depends on the project scope. A basic brand identity may take 2–4 weeks, while a complete brand transformation can take 6–10 weeks. At GoBright, we focus on quality, clarity, and long-term impact rather than rushing the process.",
+    a: "The branding timeline depends on the project scope. A basic brand identity may take 2-4 weeks, while a complete brand transformation can take 6-10 weeks. At GoBright, we focus on quality, clarity, and long-term impact rather than rushing the process.",
   },
   {
     q: "What makes GoBright different from other branding companies?",
-    a: (<><span className="text-[#e32028] font-semibold">GoBright</span> is driven by Infinite Imagination. We don't follow templates — we create brand identities from scratch, rooted in strategy, creativity, and purpose. Our family-first culture, multi-disciplinary expertise, and obsession with quality help us deliver branding that stands out, connects emotionally, and performs commercially.</>),
+    a: (<><span className="text-[#e32028] font-semibold">GoBright</span> is driven by Infinite Imagination. We don't follow templates - we create brand identities from scratch, rooted in strategy, creativity, and purpose. Our family-first culture, multi-disciplinary expertise, and obsession with quality help us deliver branding that stands out, connects emotionally, and performs commercially.</>),
   },
   {
     q: "Do you provide brand guidelines?",
@@ -38,11 +38,11 @@ const faqs = [
   },
   {
     q: "How do I choose the right branding agency?",
-    a: "Choose a branding agency that understands your vision, thinks strategically, and creates original work — not generic designs. Look for clarity, creativity, experience, and long-term thinking. GoBright partners with you as a brand-building ally, not just a service provider.",
+    a: "Choose a branding agency that understands your vision, thinks strategically, and creates original work - not generic designs. Look for clarity, creativity, experience, and long-term thinking. GoBright partners with you as a brand-building ally, not just a service provider.",
   },
   {
     q: "Why do I need a professional branding company?",
-    a: "Professional branding builds trust, attracts the right customers, and positions your business above competitors. A branding company like GoBright brings strategic thinking, creative expertise, and execution excellence — saving you time, money, and costly trial-and-error.",
+    a: "Professional branding builds trust, attracts the right customers, and positions your business above competitors. A branding company like GoBright brings strategic thinking, creative expertise, and execution excellence - saving you time, money, and costly trial-and-error.",
   },
   {
     q: "Is GoBright suitable for startups and growing businesses?",
@@ -66,7 +66,7 @@ const faqs = [
   },
   {
     q: "How can I start a branding project with GoBright?",
-    a: "You can start by contacting us for a brand consultation. We'll understand your business, goals, challenges, and vision — then craft a branding solution powered by Infinite Imagination.",
+    a: "You can start by contacting us for a brand consultation. We'll understand your business, goals, challenges, and vision - then craft a branding solution powered by Infinite Imagination.",
   },
   {
     q: "Do you work with clients outside Trichy?",
@@ -82,7 +82,7 @@ const faqs = [
   },
   {
     q: "How does GoBright ensure brand consistency?",
-    a: "We deliver detailed brand guidelines, templates, and asset libraries so your team can apply your brand consistently across every touchpoint — from social media to signage, packaging to presentations.",
+    a: "We deliver detailed brand guidelines, templates, and asset libraries so your team can apply your brand consistently across every touchpoint - from social media to signage, packaging to presentations.",
   },
 ];
 

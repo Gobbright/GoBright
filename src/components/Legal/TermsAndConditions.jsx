@@ -1,3 +1,5 @@
+﻿import PageHeroBackdrop from "../PageHeroBackdrop";
+
 const sections = [
   {
     title: "1. Acceptance of Terms",
@@ -71,9 +73,11 @@ const sections = [
     title: "10. Contact Us",
     content: [
       "For any questions regarding these Terms and Conditions, please contact us:",
-      "Email: gobright.growth@gmail.com",
+      "Email: info.gobrightglobal@gmail.com",
+      "Email 2: gobright.growth@gmail.com",
       "Phone: +91 89255 50774",
-      "Address: No. 52/B, First Floor, Paradise Towers Complex, Thennur High Road, Trichy — 620017.",
+      "Secondary Phone: +91 84382 49257",
+      "Address: No. 52/B, First Floor, Paradise Towers Complex, Thennur High Road, Trichy - 620017.",
     ],
   },
 ];
@@ -81,30 +85,32 @@ const sections = [
 export default function TermsAndConditions() {
   return (
     <main className="bg-[#0d0d0d] min-h-screen text-white relative overflow-hidden">
-      <div className="fixed inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgba(227,32,40,0.09),transparent_50%)] pointer-events-none z-0" />
+      <section className="relative overflow-hidden">
+        <PageHeroBackdrop gridHeight="50%" imageOpacity={0.08} />
 
-      {/* Red top banner */}
-      <div className="bg-[#e32028] py-5 px-6 text-center">
-        <p className="text-white font-extrabold text-xl md:text-2xl tracking-wide">
-          Terms and Conditions
-        </p>
-      </div>
+        {/* Red top banner */}
+        <div className="relative z-10 bg-[#e32028] py-5 px-6 text-center">
+          <p className="text-white font-extrabold text-xl md:text-2xl tracking-wide">
+            Terms and Conditions
+          </p>
+        </div>
 
-      {/* Header */}
-      <div className="max-w-4xl mx-auto px-4 sm:px-8 pt-12 pb-4">
-        <h1 className="text-3xl md:text-4xl font-extrabold text-white mb-3">
-          Terms &amp; <span className="text-[#e32028]">Conditions</span>
-        </h1>
-        <p className="text-[#666] text-sm">Last updated: May 2026</p>
-        <p className="text-[#aaa] text-sm leading-relaxed mt-4 max-w-2xl">
-          These Terms and Conditions govern your use of GoBright's website and services.
-          Please read them carefully before engaging with us.
-        </p>
-        <div className="mt-6 h-[2px] bg-gradient-to-r from-[#e32028] via-[#e32028]/40 to-transparent" />
-      </div>
+        {/* Header */}
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-8 pt-12 pb-10">
+          <h1 className="text-3xl md:text-4xl font-extrabold text-white mb-3">
+            Terms &amp; <span className="text-[#e32028]">Conditions</span>
+          </h1>
+          <p className="text-[#666] text-sm">Last updated: May 2026</p>
+          <p className="text-[#aaa] text-sm leading-relaxed mt-4 max-w-2xl">
+            These Terms and Conditions govern your use of GoBright's website and services.
+            Please read them carefully before engaging with us.
+          </p>
+          <div className="mt-6 h-[2px] bg-gradient-to-r from-[#e32028] via-[#e32028]/40 to-transparent" />
+        </div>
+      </section>
 
       {/* Sections */}
-      <div className="max-w-4xl mx-auto px-4 sm:px-8 py-8 flex flex-col gap-6 pb-20">
+      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-8 py-8 flex flex-col gap-6 pb-20">
         {sections.map((s) => (
           <div key={s.title} className="bg-[#111] border border-[#1e1e1e] rounded-2xl p-6 sm:p-8">
             <h2 className="text-[#e32028] font-bold text-lg mb-4">{s.title}</h2>

@@ -2,10 +2,10 @@ import ItHero from "./It_hero";
 import Billing from "./Billing";
 import Crm from "./Crm";
 import Payroll from "./Payroll";
-import techImg from "../../../assets/img/services/tech.jpg";
-import billingImg from "../../../assets/img/services/printing-technology.jpg 1.png";
-import crmImg from "../../../assets/img/whychoose/growth-analytics.jpg";
-import payrollImg from "../../../assets/img/whychoose/data-branding.jpg";
+import techImg from "../../../assets/img/services/service-3/img-1.png";
+import billingImg from "../../../assets/img/services/service-3/img-2.png";
+import crmImg from "../../../assets/img/services/service-3/img-3.png";
+import payrollImg from "../../../assets/img/services/service-3/img-4.png";
 
 export default function IT() {
   return (

@@ -1,10 +1,10 @@
-import { useEffect, useRef, useState } from "react";
+﻿import { useEffect, useRef, useState } from "react";
 
 const steps = [
   {
     number: "01",
     title: "Discovery & Strategy",
-    desc: "We dive deep into your business, audience, competitors, and goals. This research-first approach ensures every creative decision is backed by real insight — not guesswork.",
+    desc: "We dive deep into your business, audience, competitors, and goals. This research-first approach ensures every creative decision is backed by real insight - not guesswork.",
     icon: (
       <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
         <circle cx="12" cy="12" r="8" stroke="#e32028" strokeWidth="2"/>
@@ -16,7 +16,7 @@ const steps = [
   {
     number: "02",
     title: "Brand Concept & Design",
-    desc: "Our designers craft multiple creative directions tailored to your brand personality. From logo concepts to full visual systems — every pixel has a purpose.",
+    desc: "Our designers craft multiple creative directions tailored to your brand personality. From logo concepts to full visual systems - every pixel has a purpose.",
     icon: (
       <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
         <path d="M4 20L14 6l10 14H4z" stroke="#e32028" strokeWidth="2" strokeLinejoin="round"/>
@@ -28,7 +28,7 @@ const steps = [
   {
     number: "03",
     title: "Review & Refinement",
-    desc: "We present the concepts, gather your feedback, and refine until it's perfect. Collaboration is at the heart of everything we do — your vision, our craft.",
+    desc: "We present the concepts, gather your feedback, and refine until it's perfect. Collaboration is at the heart of everything we do - your vision, our craft.",
     icon: (
       <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
         <path d="M5 14l6 6L23 8" stroke="#e32028" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -39,7 +39,7 @@ const steps = [
   {
     number: "04",
     title: "Delivery & Launch",
-    desc: "We deliver all brand assets in every format you need — print, digital, social. Complete brand guidelines included so your team can maintain consistency going forward.",
+    desc: "We deliver all brand assets in every format you need - print, digital, social. Complete brand guidelines included so your team can maintain consistency going forward.",
     icon: (
       <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
         <path d="M14 4v14M14 4l-5 5M14 4l5 5" stroke="#e32028" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -104,13 +104,13 @@ export default function Process() {
             Our Creative <span className="text-[#e32028]">Process</span>
           </h2>
           <p className="text-[#666] text-sm max-w-md mx-auto leading-relaxed">
-            A proven 5-step process that takes your brand from idea to impact — with clarity, creativity, and precision at every stage.
+            A proven 5-step process that takes your brand from idea to impact - with clarity, creativity, and precision at every stage.
           </p>
         </div>
 
         {/* Steps */}
         <div className="relative">
-          {/* Connecting line — desktop only */}
+          {/* Connecting line - desktop only */}
           <div className="hidden md:block absolute top-10 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#e32028]/30 to-transparent" />
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8 md:gap-4">

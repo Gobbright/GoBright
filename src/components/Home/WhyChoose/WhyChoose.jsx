@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+﻿import { useEffect, useRef, useState } from "react";
 import icon1 from "../../../assets/img/whychoose/icon-1.png";
 import icon2 from "../../../assets/img/whychoose/icon-2.png";
 import icon3 from "../../../assets/img/whychoose/icon-3.png";
@@ -6,7 +6,7 @@ import icon3 from "../../../assets/img/whychoose/icon-3.png";
 const features = [
   {
     title: "Data-Driven Branding",
-    desc: "We analyze market trends, customer behavior, and competitors to build branding strategies backed by insights — not assumptions.",
+    desc: "We analyze market trends, customer behavior, and competitors to build branding strategies backed by insights - not assumptions.",
     img: icon1,
     alt: "Data-driven branding icon",
   },

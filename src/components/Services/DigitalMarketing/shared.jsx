@@ -1,4 +1,4 @@
-export const pageBg =
+﻿export const pageBg =
   "bg-[radial-gradient(circle_at_50%_16%,rgba(227,32,40,0.08),transparent_36%),linear-gradient(180deg,#1b1b1b_0%,#141414_58%,#171717_100%)]";
 
 export function SectionLabel({ children, align = "left" }) {
@@ -34,13 +34,13 @@ export function StarList({ title, points, children, className = "" }) {
   );
 }
 
-export function MediaBlock({ className = "", src = null, alt = "", children }) {
+export function MediaBlock({ className = "", src = null, alt = "", compact = false, children }) {
   return (
     <div className={`relative ${className}`}>
-      <div className="absolute -right-6 top-[-46px] h-[240px] w-[88px] rounded-br-[44px] rounded-tr-[44px] bg-[#e32028]" />
-      <div className="relative z-10 flex min-h-[300px] items-center justify-center overflow-hidden rounded-lg bg-[#d9d9d9] text-sm font-bold text-black shadow-[0_24px_70px_rgba(0,0,0,0.38)]">
+      <div className={`absolute -right-6 top-[-34px] rounded-br-[44px] rounded-tr-[44px] bg-[#e32028] ${compact ? "h-[170px] w-[62px]" : "h-[240px] w-[88px]"}`} />
+      <div className={`relative z-10 flex items-center justify-center overflow-hidden rounded-lg bg-[#d9d9d9] text-sm font-bold text-black shadow-[0_24px_70px_rgba(0,0,0,0.38)] ${compact ? "min-h-[220px]" : "min-h-[300px]"}`}>
         {src ? (
-          <img src={src} alt={alt} className="h-full min-h-[300px] w-full object-cover" />
+          <img src={src} alt={alt} className={`h-full w-full object-cover ${compact ? "min-h-[220px]" : "min-h-[300px]"}`} />
         ) : (
           children
         )}

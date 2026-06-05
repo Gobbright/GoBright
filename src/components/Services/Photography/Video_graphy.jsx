@@ -1,4 +1,4 @@
-const corporateVideoItems = [
+﻿const corporateVideoItems = [
   "Company profile videos",
   "Brand story films",
   "CEO & leadership message videos",
@@ -32,7 +32,7 @@ export default function Videography({
   return (
     <section className="bg-[#0d0d0d] pt-10">
 
-      {/* Tab — touches right edge */}
+      {/* Tab - touches right edge */}
       <div className="flex justify-end">
         <div className="bg-[#e0e0e0] rounded-tl-[1.8rem] inline-flex items-center justify-center px-8 py-3.5">
           <span className="text-[#e32028] font-bold text-xl tracking-wide whitespace-nowrap">Videography</span>
@@ -53,7 +53,7 @@ export default function Videography({
       </div>
 
       {/* Three-column image grid */}
-      <div className="max-w-7xl mx-auto px-8 pb-10 grid grid-cols-3 gap-5">
+      <div className="max-w-7xl mx-auto px-8 pb-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {galleryImgs.map((src, i) => (
           <div key={i} className="bg-[#d9d9d9] rounded-2xl aspect-[3/4] overflow-hidden">
             {src && <img src={src} alt={`Videography ${i + 1}`} className="w-full h-full object-cover" />}

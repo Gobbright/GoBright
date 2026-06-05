@@ -1,5 +1,4 @@
 import signageImg from "../../../assets/img/services/2024-12-11 1.png";
-import BrandingForm from "./BrandingForm";
 
 const signagePoints = [
   "LED sign boards",
@@ -98,18 +97,6 @@ export default function PrintMediaDesign() {
             </div>
           </div>
 
-          {/* \u2500\u2500 Enquiry Form \u2500\u2500 */}
-          <div className="mt-16 grid gap-12 px-6 md:px-8 items-center lg:grid-cols-[1fr_520px]">
-            <div>
-              <h3 className="text-2xl font-extrabold text-white leading-tight">
-                Need <span className="text-[#e32028]">Signage & Printing</span> Services?
-              </h3>
-              <p className="mt-4 text-base font-medium leading-7 text-[#aaa] max-w-md">
-                From LED sign boards to large format printing \u2014 GoBright delivers high-quality print and signage solutions for your business.
-              </p>
-            </div>
-            <BrandingForm />
-          </div>
         </div>
       </div>
     </section>

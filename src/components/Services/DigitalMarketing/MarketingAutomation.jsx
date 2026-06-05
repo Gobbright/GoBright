@@ -1,5 +1,5 @@
 import { MediaBlock, RedHeading, SectionLabel, StarList } from "./shared";
-import automationImg from "../../../assets/img/whychoose/data-branding.jpg";
+import automationImg from "../../../assets/img/services/service2/img6.png";
 
 const workflows = [
   "Capture and organize leads automatically from multiple channels",

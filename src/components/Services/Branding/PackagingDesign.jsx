@@ -1,5 +1,4 @@
 import packagingImg from "../../../assets/img/services/Packaging 2.png";
-import BrandingForm from "./BrandingForm";
 
 const points = [
   "Product packaging design",
@@ -54,19 +53,6 @@ export default function PackagingDesign() {
                 </li>
               ))}
             </ul>
-          </div>
-
-          {/* ── Enquiry Form ── */}
-          <div className="mt-16 grid gap-12 px-6 md:px-8 items-center lg:grid-cols-[1fr_520px]">
-            <div>
-              <h3 className="text-2xl font-extrabold text-white leading-tight">
-                Looking for Custom <span className="text-[#e32028]">Packaging Design?</span>
-              </h3>
-              <p className="mt-4 text-base font-medium leading-7 text-[#aaa] max-w-md">
-                Make your product stand out on the shelf. GoBright creates packaging that reflects your brand and drives purchase decisions.
-              </p>
-            </div>
-            <BrandingForm />
           </div>
 
           <div className="mx-auto mt-20 h-px max-w-5xl bg-[#e32028]" />

@@ -1,5 +1,4 @@
-import socialImg from "../../../assets/img/services/Digital-Marketing/GMG 1080 x 1080 1.png";
-import LeadForm from "./LeadForm";
+import socialImg from "../../../assets/img/services/service2/img2.png";
 import { MediaBlock, RedHeading, SectionLabel, StarList } from "./shared";
 
 const management = [
@@ -29,19 +28,7 @@ export default function SocialMediaMarketing() {
           <br /> Engage Audience & Generate Leads
         </RedHeading>
 
-        <div className="mt-16 grid items-center gap-10 lg:grid-cols-[0.9fr_1.1fr]">
-          <LeadForm />
-          <div className="relative mx-auto w-full max-w-[560px]">
-            <div className="absolute -right-7 top-[-48px] h-[250px] w-[92px] rounded-br-[46px] rounded-tr-[46px] bg-[#e32028]" />
-            <img
-              src={socialImg}
-              alt="Social media marketing concept"
-              className="relative z-10 aspect-square w-full rounded-sm object-cover object-center shadow-[0_26px_80px_rgba(0,0,0,0.38)]"
-            />
-          </div>
-        </div>
-
-        <div className="mt-20 grid gap-12 lg:grid-cols-2">
+        <div className="mt-16 grid gap-12 lg:grid-cols-2">
           <div>
             <h3 className="text-xl font-extrabold text-[#e32028]">
               Strategic Social Media Management
@@ -72,8 +59,8 @@ export default function SocialMediaMarketing() {
           </div>
         </div>
 
-        <div className="mt-24 grid items-center gap-12 lg:grid-cols-[1fr_0.95fr]">
-          <MediaBlock src={socialImg} alt="Social media advertising campaign" />
+        <div className="mt-24 grid items-center gap-12 lg:grid-cols-[0.78fr_1fr]">
+          <MediaBlock compact className="mx-auto w-full max-w-[430px]" src={socialImg} alt="Social media advertising campaign" />
           <div>
             <h3 className="text-xl font-extrabold text-[#e32028]">
               Social Media Advertising & Lead Generation

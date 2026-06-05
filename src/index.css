@@ -1,4 +1,4 @@
-@import "tailwindcss";
+﻿@import "tailwindcss";
 
 /* Global readability bump for small body/supporting text */
 #root :where(.text-xs) {
@@ -16,7 +16,7 @@
   line-height: 1.6;
 }
 
-/* ── Custom keyframes ───────────────────────────────────────────────── */
+/* -- Custom keyframes ------------------------------------------------- */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(40px); }
   to   { opacity: 1; transform: translateY(0); }
@@ -106,7 +106,7 @@
   animation-play-state: paused;
 }
 
-/* ── Utility animation classes ──────────────────────────────────────── */
+/* -- Utility animation classes ---------------------------------------- */
 .animate-fade-up    { animation: fadeUp   0.7s ease both; }
 .animate-fade-down  { animation: fadeDown 0.6s ease both; }
 .animate-fade-left  { animation: fadeLeft  0.7s ease both; }
@@ -133,7 +133,7 @@
 .delay-700 { animation-delay: 700ms; }
 .delay-800 { animation-delay: 800ms; }
 
-/* ── Scroll-driven animation classes ────────────────────────────────── */
+/* -- Scroll-driven animation classes ---------------------------------- */
 .scroll-fade-up {
   animation: fadeUp 0.75s ease both;
   animation-timeline: view();
@@ -158,12 +158,48 @@
   animation-range: entry 0% cover 25%;
 }
 
-/* ── Global service-page scroll animations ─────────────────────────── */
+/* -- Global service-page scroll animations --------------------------- */
 .service-page section {
+  position: relative;
+  overflow: hidden;
   background: transparent;
   animation: fadeUp 0.75s ease both;
   animation-timeline: view();
   animation-range: entry 0% cover 28%;
+}
+
+.service-page section::before {
+  content: "";
+  position: absolute;
+  inset: auto -20% 0;
+  height: min(360px, 46%);
+  pointer-events: none;
+  opacity: 0.22;
+  background-image:
+    linear-gradient(rgba(227,32,40,0.48) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(227,32,40,0.48) 1px, transparent 1px);
+  background-size: 56px 56px;
+  transform: perspective(460px) rotateX(58deg);
+  transform-origin: bottom center;
+}
+
+.service-page section::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: min(520px, 70vw);
+  height: 180px;
+  pointer-events: none;
+  border-radius: 999px;
+  background: rgba(227,32,40,0.1);
+  filter: blur(80px);
+  transform: translateX(-50%);
+}
+
+.service-page section > * {
+  position: relative;
+  z-index: 1;
 }
 
 .service-page article {
@@ -172,7 +208,16 @@
   animation-range: entry 0% cover 24%;
 }
 
-/* ── Service-page unified typography ────────────────────────────────── */
+.service-page :where(article, .rounded-xl, .rounded-2xl) {
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.service-page :where(article, .rounded-xl, .rounded-2xl):hover {
+  border-color: rgba(227,32,40,0.42);
+  box-shadow: 0 24px 70px rgba(0,0,0,0.38), 0 0 32px rgba(227,32,40,0.12);
+}
+
+/* -- Service-page unified typography ---------------------------------- */
 .service-page h1 {
   font-size: 20px;
   font-weight: 800;
@@ -223,7 +268,7 @@
   font-size: 13px;
 }
 
-/* Packaging section — disable scroll animation */
+/* Packaging section - disable scroll animation */
 .service-page .packaging-section {
   animation: none;
   opacity: 1;
@@ -244,13 +289,13 @@
   }
 }
 
-/* ── Gradient animated bg ───────────────────────────────────────────── */
+/* -- Gradient animated bg --------------------------------------------- */
 .bg-animate-gradient {
   background-size: 300% 300%;
   animation: gradientShift 6s ease infinite;
 }
 
-/* ── Reduced motion ─────────────────────────────────────────────────── */
+/* -- Reduced motion --------------------------------------------------- */
 @media (prefers-reduced-motion: reduce) {
   *,
   .animate-fade-up, .animate-fade-down, .animate-fade-left, .animate-fade-right,

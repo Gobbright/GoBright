@@ -1,5 +1,4 @@
 import guidelineImg from "../../../assets/img/services/Untitled-2 2.png";
-import BrandingForm from "./BrandingForm";
 
 const guidelinePoints = [
   "Logo Usage Rules - Correct logo sizes, spacing, and variations",
@@ -83,18 +82,6 @@ export default function BrandGuideline() {
             </div>
           </div>
 
-          {/* ── Enquiry Form ── */}
-          <div className="mt-16 grid gap-12 px-6 md:px-10 items-center lg:grid-cols-[1fr_520px]">
-            <div>
-              <h3 className="text-2xl font-extrabold text-white leading-tight">
-                Want a <span className="text-[#e32028]">Brand Guideline</span> Document?
-              </h3>
-              <p className="mt-4 text-base font-medium leading-7 text-[#aaa] max-w-md">
-                Ensure your brand stays consistent everywhere. Let GoBright build a complete brand guideline tailored to your identity.
-              </p>
-            </div>
-            <BrandingForm />
-          </div>
         </div>
       </div>
     </section>

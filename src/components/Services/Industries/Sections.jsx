@@ -1,4 +1,4 @@
-const healthcareItems = [
+﻿const healthcareItems = [
   "Medical SEO services",
   "Online reputation management",
   "Appointment booking funnels",
@@ -79,7 +79,7 @@ export default function Sections({
   return (
     <section className="bg-[#0d0d0d] pt-10">
 
-      {/* ── Healthcare & Clinics ── */}
+      {/* -- Healthcare & Clinics -- */}
       <SectionHeader
         title="Healthcare & Clinics"
         subtitle="For hospitals, dental clinics, diagnostic centers, and medical practitioners:"
@@ -92,7 +92,7 @@ export default function Sections({
         <ImageBlock src={healthcareImg} alt="Healthcare" accentSide="right" />
       </div>
 
-      {/* ── Real Estate & Builders ── */}
+      {/* -- Real Estate & Builders -- */}
       <SectionHeader
         title="Real Estate & Builders"
         subtitle="We help real estate developers and agents generate quality property leads through:"
@@ -101,11 +101,11 @@ export default function Sections({
         <ImageBlock src={realEstateImg} alt="Real Estate" accentSide="left" />
         <FeatureCard
           items={realEstateItems}
-          footer="Target serious buyers — not just inquiries."
+          footer="Target serious buyers - not just inquiries."
         />
       </div>
 
-      {/* ── Corporate & Startups ── */}
+      {/* -- Corporate & Startups -- */}
       <SectionHeader
         title="Corporate & Startups"
         subtitle="For startups and corporate companies in Trichy:"

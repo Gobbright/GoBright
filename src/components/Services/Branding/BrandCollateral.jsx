@@ -1,19 +1,18 @@
-import brandingImg from "../../../assets/img/services/branding.jpg";
-import businessCardImg from "../../../assets/img/services/brand-collateral/business-card.svg";
-import letterheadImg from "../../../assets/img/services/brand-collateral/letterhead.svg";
-import envelopeImg from "../../../assets/img/services/brand-collateral/envelope.svg";
-import idCardImg from "../../../assets/img/services/brand-collateral/id-card.svg";
-import emailSignatureImg from "../../../assets/img/services/brand-collateral/email-signature.svg";
-import brochureImg from "../../../assets/img/services/brand-collateral/brochure-profile.svg";
-import flyersImg from "../../../assets/img/services/brand-collateral/flyers-pamphlets.svg";
-import postersImg from "../../../assets/img/services/brand-collateral/posters-banners.svg";
-import catalogueImg from "../../../assets/img/services/brand-collateral/product-catalogue.svg";
-import presentationImg from "../../../assets/img/services/brand-collateral/presentation-deck.svg";
-import officeBrandingImg from "../../../assets/img/services/brand-collateral/office-branding.svg";
-import exhibitionStallImg from "../../../assets/img/services/brand-collateral/exhibition-stall.svg";
-import standeeImg from "../../../assets/img/services/brand-collateral/rollup-standee.svg";
-import merchandiseImg from "../../../assets/img/services/brand-collateral/corporate-merchandise.svg";
-import BrandingForm from "./BrandingForm";
+﻿import brandingImg from "../../../assets/img/services/Branding-&-brand-identity/corporate branding materials/img4.png";
+import ourCollateral1 from "../../../assets/img/services/Branding-&-brand-identity/our brand collateral design serviecs/img1.png";
+import ourCollateral2 from "../../../assets/img/services/Branding-&-brand-identity/our brand collateral design serviecs/img2.png";
+import ourCollateral3 from "../../../assets/img/services/Branding-&-brand-identity/our brand collateral design serviecs/img3.png";
+import ourCollateral4 from "../../../assets/img/services/Branding-&-brand-identity/our brand collateral design serviecs/img4.png";
+import ourCollateral5 from "../../../assets/img/services/Branding-&-brand-identity/our brand collateral design serviecs/img5.png";
+import corpBrand0 from "../../../assets/img/services/Branding-&-brand-identity/corporate branding materials/img1.png";
+import corpBrand1 from "../../../assets/img/services/Branding-&-brand-identity/corporate branding materials/img2.png";
+import corpBrand2 from "../../../assets/img/services/Branding-&-brand-identity/corporate branding materials/img3.png";
+import corpBrand3 from "../../../assets/img/services/Branding-&-brand-identity/corporate branding materials/img4.png";
+import mktPromo1 from "../../../assets/img/services/Branding-&-brand-identity/marketing & promotion materials/img1.png";
+import mktPromo2 from "../../../assets/img/services/Branding-&-brand-identity/marketing & promotion materials/img2.png";
+import mktPromo3 from "../../../assets/img/services/Branding-&-brand-identity/marketing & promotion materials/img3.png";
+import mktPromo4 from "../../../assets/img/services/Branding-&-brand-identity/marketing & promotion materials/img4.png";
+import mktPromo5 from "../../../assets/img/services/Branding-&-brand-identity/marketing & promotion materials/img5.png";
 
 const benefits = [
   "Builds trust",
@@ -23,33 +22,26 @@ const benefits = [
 ];
 
 const services = [
-  { title: "Business Card Design", img: businessCardImg },
-  { title: "Letterhead Design", img: letterheadImg },
-  { title: "Envelope Design", img: envelopeImg },
-  { title: "ID Card Design", img: idCardImg },
-  { title: "Email Signature Design", img: emailSignatureImg },
+  { title: "Business Card Design", img: ourCollateral1 },
+  { title: "Letterhead Design", img: ourCollateral2 },
+  { title: "Envelope Design", img: ourCollateral3 },
+  { title: "ID Card Design", img: ourCollateral4 },
+  { title: "Email Signature Design", img: ourCollateral5 },
 ];
 
 const marketingMaterials = [
-  { title: "Brochure & Company Profile Design", img: brochureImg },
-  { title: "Flyers & Pamphlets", img: flyersImg },
-  { title: "Posters & Banners", img: postersImg },
-  { title: "Product Catalogue", img: catalogueImg },
-  { title: "Presentation Deck Design", img: presentationImg },
+  { title: "Brochure & Company Profile Design", img: mktPromo1 },
+  { title: "Flyers & Pamphlets", img: mktPromo2 },
+  { title: "Posters & Banners", img: mktPromo3 },
+  { title: "Product Catalogue", img: mktPromo4 },
+  { title: "Presentation Deck Design", img: mktPromo5 },
 ];
 
 const corporateMaterials = [
-  { title: "Office Branding Graphics", img: officeBrandingImg },
-  { title: "Exhibition Stall Design", img: exhibitionStallImg },
-  { title: "Roll-up Standee Design", img: standeeImg },
-  { title: "Corporate Merchandise Design", img: merchandiseImg },
-];
-
-const corporateMaterialSpans = [
-  "md:col-span-2",
-  "md:col-span-3",
-  "md:col-span-3",
-  "md:col-span-2",
+  { title: "Office Branding Graphics", img: corpBrand0 },
+  { title: "Exhibition Stall Design", img: corpBrand1 },
+  { title: "Roll-up Standee Design", img: corpBrand2 },
+  { title: "Corporate Merchandise Design", img: corpBrand3 },
 ];
 
 const growthPoints = [
@@ -63,19 +55,29 @@ const growthPoints = [
 function MaterialCard({ title, img, wide = false, className = "" }) {
   return (
     <article
-      className={`group relative flex w-full items-end justify-center overflow-hidden rounded-md bg-[#171717] px-4 pb-5 text-center text-xs font-bold text-white shadow-[0_18px_45px_rgba(0,0,0,0.28)] transition duration-300 hover:-translate-y-1 ${
-        wide ? "min-h-[260px]" : "min-h-[255px] max-w-[260px]"
-      } ${className}`}
+      className={`group relative flex w-full flex-col overflow-hidden rounded-2xl bg-white
+        border-2 border-white hover:border-[#e32028]
+        shadow-[0_8px_30px_rgba(255,255,255,0.12),0_20px_50px_rgba(0,0,0,0.4)] hover:shadow-[0_8px_40px_rgba(255,255,255,0.2),0_20px_60px_rgba(227,32,40,0.25)]
+        transition-all duration-300 hover:-translate-y-2
+        ${wide ? "min-h-[280px]" : "min-h-[270px] max-w-[280px]"} ${className}`}
     >
-      <img
-        src={img}
-        alt={title}
-        className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105"
-      />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-black/10" />
-      <h5 className="relative z-10 max-w-[92%] rounded-sm bg-black/35 px-3 py-2 leading-5 backdrop-blur-[2px]">
-        {title}
-      </h5>
+      {/* Image */}
+      <div className="relative flex-1 overflow-hidden">
+        <img
+          src={img}
+          alt={title}
+          className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+        />
+        {/* Red top accent line on hover */}
+        <div className="absolute top-0 left-0 right-0 h-[3px] bg-[#e32028] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+      </div>
+
+      {/* Title bar - white bg */}
+      <div className="bg-white px-4 py-3 text-center border-t-2 border-transparent group-hover:border-[#e32028] transition-colors duration-300">
+        <h5 className="text-xs font-bold leading-5 tracking-wide text-[#111]">
+          {title}
+        </h5>
+      </div>
     </article>
   );
 }
@@ -198,14 +200,13 @@ export default function BrandCollateral() {
             </p>
           </div>
 
-          <div className="mx-auto mt-10 grid max-w-5xl grid-cols-1 gap-5 md:grid-cols-5">
-            {corporateMaterials.map((service, index) => (
+          <div className="mx-auto mt-10 grid max-w-4xl grid-cols-1 gap-5 sm:grid-cols-2">
+            {corporateMaterials.map((service) => (
               <MaterialCard
                 key={service.title}
                 title={service.title}
                 img={service.img}
                 wide
-                className={corporateMaterialSpans[index]}
               />
             ))}
           </div>
@@ -233,18 +234,6 @@ export default function BrandCollateral() {
             </p>
           </div>
 
-          {/* ── Enquiry Form ── */}
-          <div className="mt-16 grid gap-12 items-center lg:grid-cols-[1fr_520px]">
-            <div>
-              <h3 className="text-2xl font-extrabold text-white leading-tight">
-                Need Brand <span className="text-[#e32028]">Collateral</span> Design?
-              </h3>
-              <p className="mt-4 text-base font-medium leading-7 text-[#aaa] max-w-md">
-                Get professionally designed business cards, brochures, banners, and more — all aligned to your brand identity.
-              </p>
-            </div>
-            <BrandingForm />
-          </div>
           </div>
         </div>
       </div>

@@ -1,4 +1,4 @@
-const restaurantServices = [
+﻿const restaurantServices = [
   "Google Business Profile optimization",
   "Local SEO for restaurants in Trichy",
   "Instagram Reels & food content marketing",
@@ -28,10 +28,10 @@ export default function Restaurants({ restaurantImg = null, educationImg = null 
   return (
     <section className="bg-[#0d0d0d] pt-10">
 
-      {/* ── Restaurants Section ── */}
+      {/* -- Restaurants Section -- */}
       <div className="max-w-7xl mx-auto px-8 pb-6 text-center">
         <h2 className="text-[#e32028] font-bold text-2xl md:text-3xl mb-3">
-          Restaurants &amp; Food Businesses in Trichy – Digital Marketing Services
+          Restaurants &amp; Food Businesses in Trichy - Digital Marketing Services
         </h2>
         <p className="text-white text-sm md:text-[0.93rem] leading-relaxed max-w-2xl mx-auto">
           We help restaurants, cafes, bakeries, ice cream parlours, and cloud kitchens in Trichy
@@ -43,7 +43,7 @@ export default function Restaurants({ restaurantImg = null, educationImg = null 
       {/* Two-column: left cards, right image */}
       <div className="max-w-7xl mx-auto px-8 pb-14 grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
 
-        {/* Left — services card + strategy block */}
+        {/* Left - services card + strategy block */}
         <div className="flex flex-col gap-6">
 
           {/* Services card */}
@@ -67,10 +67,10 @@ export default function Restaurants({ restaurantImg = null, educationImg = null 
             </p>
             <p className="text-[#cccccc] text-sm mb-3">Our focus is simple and result-driven:</p>
             <p className="text-white text-sm font-semibold mb-3">
-              Increase visibility → Attract nearby customers → Convert into loyal repeat buyers
+              Increase visibility - attract nearby customers - convert into loyal repeat buyers
             </p>
             <p className="text-[#cccccc] text-sm leading-relaxed mb-3">
-              We don&apos;t just run ads — we build strong local restaurant brands that dominate their area.
+              We don&apos;t just run ads - we build strong local restaurant brands that dominate their area.
             </p>
             <p className="text-[#cccccc] text-sm leading-relaxed">
               Position your restaurant as a top local brand in Trichy with structured digital
@@ -80,7 +80,7 @@ export default function Restaurants({ restaurantImg = null, educationImg = null 
 
         </div>
 
-        {/* Right — image with red accent on right */}
+        {/* Right - image with red accent on right */}
         <div className="relative pr-4">
           <div className="w-full min-h-120 bg-[#d9d9d9] rounded-2xl overflow-hidden">
             {restaurantImg && (
@@ -92,7 +92,7 @@ export default function Restaurants({ restaurantImg = null, educationImg = null 
 
       </div>
 
-      {/* ── Educational Institutions Section ── */}
+      {/* -- Educational Institutions Section -- */}
       <div className="max-w-7xl mx-auto px-8 pb-6 text-center">
         <h2 className="text-[#e32028] font-bold text-2xl md:text-3xl mb-3">
           Educational Institutions &amp; Coaching Centers
@@ -104,7 +104,7 @@ export default function Restaurants({ restaurantImg = null, educationImg = null 
 
       <div className="max-w-7xl mx-auto px-8 pb-14 grid grid-cols-1 md:grid-cols-2 gap-8 items-center mt-4">
 
-        {/* Left — image with red left accent */}
+        {/* Left - image with red left accent */}
         <div className="relative pl-8">
           <div className="absolute left-0 top-6 bottom-6 w-8 bg-[#e32028] rounded-r-3xl" />
           <div className="w-full min-h-52 bg-[#d9d9d9] rounded-2xl overflow-hidden">
@@ -114,7 +114,7 @@ export default function Restaurants({ restaurantImg = null, educationImg = null 
           </div>
         </div>
 
-        {/* Right — features card */}
+        {/* Right - features card */}
         <div className="bg-[#1a1a1a] rounded-2xl p-6">
           <ul className="flex flex-col gap-3 mb-5">
             {educationFeatures.map((item) => (

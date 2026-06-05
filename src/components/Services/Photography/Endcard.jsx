@@ -1,4 +1,4 @@
-const whyFeatures = [
+﻿const whyFeatures = [
   "Advanced 4K & cinematic camera equipment",
   "Drone videography available",
   "Professional lighting & studio setup",
@@ -57,7 +57,7 @@ export default function Endcard({ supportImg = null }) {
         {/* Bottom row: industries card + image with red accent */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center pb-10">
 
-          {/* Left — industries card */}
+          {/* Left - industries card */}
           <div className="bg-[#1a1a1a] rounded-2xl p-6">
             <p className="text-white font-bold text-base mb-5">
               Our commercial production services support :
@@ -71,7 +71,7 @@ export default function Endcard({ supportImg = null }) {
             </ul>
           </div>
 
-          {/* Right — image with red accent on right */}
+          {/* Right - image with red accent on right */}
           <div className="relative pr-4">
             <div className="w-full min-h-64 bg-[#d9d9d9] rounded-2xl overflow-hidden">
               {supportImg && (

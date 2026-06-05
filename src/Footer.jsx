@@ -1,7 +1,6 @@
-import logo from "./assets/img/logo.png";
-
+﻿
 const navPrimary = ["Home", "Services", "Contact us"];
-const navSecondary = ["About us", "Terms and Conditions", "Privacy Policy", "Refund Policy"];
+const navSecondary = ["About us", "Careers", "Terms and Conditions", "Privacy Policy", "Refund Policy"];
 const servicesList = [
   "Branding & Brand identity",
   "Digital Marketing",
@@ -83,14 +82,17 @@ export default function Footer() {
         {/* Three-column grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
 
-          {/* Column 1 — Contact */}
+          {/* Column 1 - Contact */}
           <div className="flex flex-col gap-7">
             {/* Phone */}
             <div className="flex items-center gap-4">
               <span className="flex items-center justify-center w-10 h-10 rounded-full border-2 border-white shrink-0">
                 <PhoneIcon />
               </span>
-              <span className="text-[0.95rem] text-[#cccccc]">+91 89255 50774</span>
+              <span className="flex flex-col gap-1">
+                <span className="text-[0.95rem] text-[#cccccc]">+91 89255 50774</span>
+                <span className="text-[0.95rem] text-[#cccccc]">+91 84382 49257</span>
+              </span>
             </div>
 
             {/* Email */}
@@ -98,7 +100,10 @@ export default function Footer() {
               <span className="flex items-center justify-center w-10 h-10 rounded-full border-2 border-white shrink-0">
                 <MailIcon />
               </span>
-              <span className="text-[0.95rem] text-[#cccccc]">gobright.growth@gmail.com</span>
+              <span className="flex flex-col gap-1">
+                <span className="text-[0.95rem] text-[#cccccc]">info.gobrightglobal@gmail.com</span>
+                <span className="text-[0.95rem] text-[#cccccc]">gobright.growth@gmail.com</span>
+              </span>
             </div>
 
             {/* Address */}
@@ -115,7 +120,7 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Column 2 — Navigation */}
+          {/* Column 2 - Navigation */}
           <div className="flex flex-col gap-3 md:pl-16">
             {navPrimary.map((item) => (
               <a
@@ -139,7 +144,7 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Column 3 — Services + Social */}
+          {/* Column 3 - Services + Social */}
           <div className="flex flex-col gap-3">
             {servicesList.map((s) => (
               <a
@@ -179,7 +184,7 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="border-t border-[#2a2a2a] mt-4">
         <div className="max-w-7xl mx-auto px-8 py-4">
-          <p className="text-[#888888] text-sm">©Copyrights 2026 GoBright</p>
+          <p className="text-[#888888] text-sm">Â©Copyrights 2026 GoBright</p>
         </div>
       </div>
     </footer>

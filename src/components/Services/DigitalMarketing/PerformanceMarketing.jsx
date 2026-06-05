@@ -1,5 +1,5 @@
 import { MediaBlock, RedHeading, SectionLabel, StarList } from "./shared";
-import performanceImg from "../../../assets/img/whychoose/performance.jpg";
+import performanceImg from "../../../assets/img/services/service2/img5.png";
 
 const services = [
   "Strategic lead generation campaigns",
@@ -42,7 +42,6 @@ export default function PerformanceMarketing() {
             and directly contribute to your business growth.
           </p>
         </div>
-        <MediaBlock className="mt-14" src={performanceImg} alt="Performance marketing analytics" />
         <div className="mt-16 grid gap-12 lg:grid-cols-2">
           <StarList title="Our performance marketing services include:" points={services}>
             We don't just run advertisements - we create structured marketing funnels
@@ -53,6 +52,7 @@ export default function PerformanceMarketing() {
             your sales pipeline and support long-term business growth.
           </StarList>
         </div>
+        <MediaBlock compact className="mx-auto mt-14 w-full max-w-4xl" src={performanceImg} alt="Performance marketing analytics" />
       </div>
     </section>
   );

@@ -1,5 +1,6 @@
 import brandingImg from "../../../assets/img/services/1 21.png";
-import BrandingForm from "./BrandingForm";
+import PageHeroBackdrop from "../../PageHeroBackdrop";
+import ServiceLeadForm from "../ServiceLeadForm";
 
 const strategyPoints = [
   "Brand Research & Market Analysis - Understanding your audience, competitors, and market trends",
@@ -18,17 +19,15 @@ const whyPoints = [
 ];
 
 export default function BrandStrategy() {
-  const inputClass =
-    "h-12 w-full rounded-md border border-[#d8d8d8] bg-white px-4 text-sm font-medium text-[#222] outline-none transition placeholder:text-[#8a8a8a] focus:border-[#e32028] focus:bg-white focus:shadow-[0_0_0_3px_rgba(227,32,40,0.12)]";
-
   return (
-    <section className="bg-[#0b0b0b] pb-28">
-      <div className="bg-[#e32028] px-5 py-6 text-center text-2xl font-extrabold leading-tight text-white sm:px-8 md:text-[28px]">
-        Best Branding & Brand Identity services in Trichy - Serving Clients
+    <section className="relative overflow-hidden bg-[#0d0d0d] pb-28">
+      <PageHeroBackdrop />
+      <div className="relative z-10 bg-[#e32028] px-5 py-6 text-center text-2xl font-extrabold leading-tight text-white sm:px-8 md:text-[28px]">
+        Best Branding & Brand Identity Services in Trichy - Serving Clients
         Worldwide
       </div>
 
-      <div className="mx-auto max-w-7xl pt-12">
+      <div className="relative z-10 mx-auto max-w-7xl pt-12">
         <h1 className="relative left-[calc(50%-50vw)] w-[min(390px,88vw)] rounded-tr-2xl bg-[#eeeeee] px-7 py-3 text-center text-xl font-extrabold tracking-wide text-[#e32028]">
           Brand Strategy & Positioning
         </h1>
@@ -93,10 +92,12 @@ export default function BrandStrategy() {
             </div>
           </div>
 
-          <aside className="space-y-8">
-            <BrandingForm />
-
-            <div className="relative mx-auto w-full max-w-[520px] pr-7">
+          <aside className="mx-auto flex w-full max-w-[520px] flex-col gap-8 scroll-fade-right">
+            <ServiceLeadForm
+              service="Branding & Brand Identity"
+              className="w-full"
+            />
+            <div className="relative w-full pr-7">
               <div className="absolute bottom-[-22px] right-0 h-[310px] w-[72px] rounded-br-[34px] bg-[#e32028]" />
               <img
                 src={brandingImg}

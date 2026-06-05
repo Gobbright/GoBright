@@ -1,4 +1,4 @@
-const billingFeatures = [
+﻿const billingFeatures = [
   "GST-ready billing",
   "Inventory management",
   "Barcode integration",
@@ -21,7 +21,7 @@ export default function Billing({
   return (
     <section className="bg-[#0d0d0d] pt-10">
 
-      {/* Tab — touches right edge */}
+      {/* Tab - touches right edge */}
       <div className="flex justify-end">
         <div className="bg-[#e0e0e0] rounded-tl-[1.8rem] inline-flex items-center justify-center px-8 py-3.5">
           <span className="text-[#e32028] font-bold text-xl tracking-wide whitespace-nowrap">{tabText}</span>
@@ -46,7 +46,7 @@ export default function Billing({
       {/* Two-column: image left, features card right */}
       <div className="max-w-7xl mx-auto px-8 pb-14 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
 
-        {/* Left — image with red accent on far left */}
+        {/* Left - image with red accent on far left */}
         <div className="relative">
           {/* Red rounded accent peeking from left edge */}
           <div className="absolute -left-4 top-6 bottom-6 w-10 bg-[#e32028] rounded-r-4xl" />
@@ -57,7 +57,7 @@ export default function Billing({
           </div>
         </div>
 
-        {/* Right — features card */}
+        {/* Right - features card */}
         <div className="bg-[#1a1a1a] rounded-2xl p-6">
           <p className="text-white font-bold text-base mb-5">Features include:</p>
           <ul className="flex flex-col gap-3 mb-5">

@@ -1,40 +1,54 @@
-import amico from "../../assets/img/About/amico.png";
+﻿import { useEffect, useRef, useState } from "react";
+import heroImage from "../../assets/img/About/img1.png";
+import PageHeroBackdrop from "../PageHeroBackdrop";
 
 export default function HeroSection() {
-  // Professional hero image for About section
-  const heroImage = amico;
+  const [visible, setVisible] = useState(false);
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([e]) => { if (e.isIntersecting) setVisible(true); },
+      { threshold: 0.1 }
+    );
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, []);
 
   return (
-    <section className="bg-[#0d0d0d] pt-10 relative overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgba(227,32,40,0.11),transparent_55%)] pointer-events-none" />
-      <div
-        className="absolute bottom-0 left-[-20%] right-[-20%] h-[40%] pointer-events-none"
-        style={{
-          backgroundImage: `linear-gradient(rgba(227,32,40,0.5) 1px,transparent 1px),linear-gradient(90deg,rgba(227,32,40,0.5) 1px,transparent 1px)`,
-          backgroundSize: "50px 50px",
-          transform: "perspective(400px) rotateX(55deg)",
-          transformOrigin: "bottom center",
-          opacity: 0.4,
-        }}
-      />
+    <section ref={ref} className="bg-[#0d0d0d] pt-10 relative overflow-hidden">
+      <PageHeroBackdrop />
 
       {/* Red banner */}
-      <div className="bg-[#e32028] py-4 px-6 text-center">
+      <div className="bg-[#e32028] py-4 px-6 text-center relative z-10">
         <p className="text-white font-bold text-lg md:text-xl tracking-wide">
-          GoBright – A 360° Brand Growth Company Powered by Infinite Imagination
+          GoBright - A 360 degrees Brand Growth Company Powered by Infinite Imagination
         </p>
       </div>
 
-      {/* About Us tab — outside padded container to touch left edge */}
-      <div className="bg-[#e0e0e0] rounded-tr-[1.8rem] w-56 py-3.5 flex items-center justify-center mt-10">
+      {/* About Us tab */}
+      <div className="bg-[#e0e0e0] rounded-tr-[1.8rem] w-56 py-3.5 flex items-center justify-center mt-10 relative z-10">
         <span className="text-[#e32028] font-bold text-xl tracking-wide">About Us</span>
       </div>
 
-      {/* Main content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-8 py-10 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      {/* Section label */}
+      <div
+        className="flex items-center justify-center gap-3 mt-8 transition-all duration-700"
+        style={{ opacity: visible ? 1 : 0, transform: visible ? "translateY(0)" : "translateY(20px)" }}
+      >
+        <span className="w-12 sm:w-16 h-[2px] bg-[#e32028]" />
+        <span className="text-[#e32028] text-xs font-semibold tracking-[0.2em] uppercase">Who We Are</span>
+        <span className="w-12 sm:w-16 h-[2px] bg-[#e32028]" />
+      </div>
 
-        {/* Left — text */}
-        <div>
+      {/* Main content */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-8 py-10 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+        {/* Left - text */}
+        <div
+          className="transition-all duration-700"
+          style={{ opacity: visible ? 1 : 0, transform: visible ? "translateY(0)" : "translateY(30px)", transitionDelay: "150ms" }}
+        >
           <div className="flex flex-col gap-5 text-[#cccccc] text-[0.97rem] leading-relaxed">
             <p>
               Based in Trichy,{" "}
@@ -51,16 +65,19 @@ export default function HeroSection() {
               systems that increase visibility, generate qualified leads, and create
               sustainable business impact.
             </p>
-            <p>We don't just market brands — we build them to lead.</p>
+            <p>We don't just market brands - we build them to lead.</p>
           </div>
         </div>
 
-        {/* Right — illustration */}
-        <div className="flex justify-center">
+        {/* Right - image */}
+        <div
+          className="flex justify-center transition-all duration-700"
+          style={{ opacity: visible ? 1 : 0, transform: visible ? "translateY(0)" : "translateY(30px)", transitionDelay: "300ms" }}
+        >
           <img
             src={heroImage}
-            alt="GoBright team illustration"
-            className="w-full max-w-md object-contain"
+            alt="GoBright branding"
+            className="w-full max-w-md h-72 object-cover rounded-2xl border border-[#2a2a2a] shadow-[0_0_30px_rgba(227,32,40,0.1)]"
           />
         </div>
 

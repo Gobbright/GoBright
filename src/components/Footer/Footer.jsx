@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+﻿import { useEffect, useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import logo from "../../assets/img/logo.png";
 import { getSubmitLabel, sendContactLead, validateLead } from "../../lib/contactApi";
 
@@ -10,12 +10,13 @@ const navPrimary = [
 ];
 const navSecondary = [
   { label: "About us",             to: "/about"             },
+  { label: "Careers",              to: "/careers"           },
   { label: "Terms and Conditions", to: "/terms-and-conditions" },
   { label: "Privacy Policy",       to: "/privacy-policy"    },
   { label: "Refund Policy",        to: "/refund-policy"     },
 ];
 const servicesList = [
-  { label: "Branding & Brand identity",   to: "/services/branding-&-brand-identity"   },
+  { label: "Branding & Brand Identity",   to: "/services/branding-&-brand-identity"   },
   { label: "Digital Marketing",           to: "/services/digital-marketing"            },
   { label: "Tech Solutions",              to: "/services/tech-solutions"               },
   { label: "Photography & Videography",   to: "/services/photography-&-videography"   },
@@ -23,7 +24,9 @@ const servicesList = [
 ];
 const contactLinks = {
   phone: "tel:+918925550774",
-  mail: "mailto:gobright.growth@gmail.com",
+  phoneSecondary: "tel:+918438249257",
+  mail: "mailto:info.gobrightglobal@gmail.com",
+  mailSecondary: "mailto:gobright.growth@gmail.com",
   whatsapp: "https://wa.me/918925550774",
   facebook: "https://www.facebook.com/share/1BFxws7tTx/",
   instagram: "https://www.instagram.com/gobrightglobal?igsh=ZGM5ZnV5ajFxdDFz",
@@ -56,8 +59,8 @@ function MapIcon() {
 
 function FacebookIcon() {
   return (
-    <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
-      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+    <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5" style={{ display: "block" }}>
+      <path d="M13 10h3l-.5 3H13v9h-3v-9H8v-3h2V8.5C10 6.6 11.1 5 13.5 5H16v3h-1.5c-.6 0-1.5.3-1.5 1.2V10z" />
     </svg>
   );
 }
@@ -133,7 +136,7 @@ function ContactEnquiry() {
     <section className="bg-[#0d0d0d] border-t border-[#1a1a1a]">
       <div className="max-w-7xl mx-auto px-4 sm:px-8 py-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
 
-        {/* Left — Location */}
+        {/* Left - Location */}
         <div className="flex flex-col gap-7">
           <div>
             <div className="flex items-center gap-3 mb-3">
@@ -164,7 +167,7 @@ function ContactEnquiry() {
 
         </div>
 
-        {/* Right — Enquiry Form */}
+        {/* Right - Enquiry Form */}
         <div>
           <div className="mb-6">
             <div className="flex items-center gap-3 mb-3">
@@ -218,9 +221,11 @@ function ContactEnquiry() {
 }
 
 export default function Footer() {
+  const navigate = useNavigate();
   const { pathname } = useLocation();
   const hideContactEnquiry =
     pathname === "/contact" ||
+    pathname === "/careers" ||
     pathname.startsWith("/services") ||
     pathname === "/industries";
 
@@ -237,19 +242,33 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
 
           <div className="flex flex-col gap-7">
-            <a href={contactLinks.phone} className="flex items-center gap-4 text-[#cccccc] no-underline hover:text-[#e32028] transition-colors duration-200">
+            <div className="flex items-center gap-4 text-[#cccccc]">
               <span className="flex items-center justify-center w-10 h-10 rounded-full border-2 border-white shrink-0">
                 <PhoneIcon />
               </span>
-              <span className="text-[0.95rem] text-[#cccccc]">+91 89255 50774</span>
-            </a>
+              <span className="flex flex-col gap-1">
+                <a href={contactLinks.phone} className="text-[0.95rem] text-[#cccccc] no-underline hover:text-[#e32028] transition-colors duration-200">
+                  +91 89255 50774
+                </a>
+                <a href={contactLinks.phoneSecondary} className="text-[0.95rem] text-[#cccccc] no-underline hover:text-[#e32028] transition-colors duration-200">
+                  +91 84382 49257
+                </a>
+              </span>
+            </div>
 
-            <a href={contactLinks.mail} className="flex items-center gap-4 text-[#cccccc] no-underline hover:text-[#e32028] transition-colors duration-200">
+            <div className="flex items-center gap-4 text-[#cccccc]">
               <span className="flex items-center justify-center w-10 h-10 rounded-full border-2 border-white shrink-0">
                 <MailIcon />
               </span>
-              <span className="text-[0.95rem] text-[#cccccc]">gobright.growth@gmail.com</span>
-            </a>
+              <span className="flex flex-col gap-1">
+                <a href={contactLinks.mail} className="text-[0.95rem] text-[#cccccc] no-underline hover:text-[#e32028] transition-colors duration-200">
+                  info.gobrightglobal@gmail.com
+                </a>
+                <a href={contactLinks.mailSecondary} className="text-[0.95rem] text-[#cccccc] no-underline hover:text-[#e32028] transition-colors duration-200">
+                  gobright.growth@gmail.com
+                </a>
+              </span>
+            </div>
 
             <div className="flex items-start gap-4">
               <span className="flex items-center justify-center w-10 h-10 rounded-full border-2 border-white shrink-0 mt-0.5">
@@ -262,6 +281,7 @@ export default function Footer() {
                 Thennur High Road, TRICHY - 620017.
               </address>
             </div>
+
           </div>
 
           <div className="flex flex-col gap-3 md:pl-16">
@@ -302,7 +322,7 @@ export default function Footer() {
 
             <div className="mt-5">
               <p className="text-[#e32028] font-semibold text-[0.95rem] mb-3">Stay Connected</p>
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-3 flex-wrap">
                 {[
                   { label: "Facebook", icon: <FacebookIcon />, href: contactLinks.facebook },
                   { label: "Instagram", icon: <InstagramIcon />, href: contactLinks.instagram },
@@ -330,11 +350,45 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-[#2a2a2a] mt-4">
-        <div className="max-w-7xl mx-auto px-8 py-4">
-          <p className="text-[#888888] text-sm">©Copyrights 2026 GoBright</p>
+        <div className="max-w-7xl mx-auto px-8 py-4 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <div className="flex items-center gap-3">
+            <p className="text-[#888888] text-sm">
+              &copy; 2026{" "}
+              <button
+                onClick={() => navigate("/team")}
+                title="Employee Login"
+                className="text-[#e32028] hover:text-[#c41c22] transition-colors duration-200 cursor-pointer bg-transparent border-none p-0 font-inherit text-sm"
+              >
+                GoBright
+              </button>
+              . All rights reserved.
+            </p>
+          </div>
+          <div className="flex items-center gap-4">
+            {/* Subtle admin login — hidden in plain sight */}
+            <Link to="/admin" title="" className="text-[#2a2a2a] hover:text-[#555] transition-colors duration-300 no-underline flex-shrink-0" aria-label="Admin">
+              <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+              </svg>
+            </Link>
+            <span className="text-[#222] text-xs">|</span>
+            {[
+              { label: "Terms & Conditions", to: "/terms-and-conditions" },
+              { label: "Privacy Policy",     to: "/privacy-policy"       },
+              { label: "Refund Policy",      to: "/refund-policy"        },
+            ].map(({ label, to }, i, arr) => (
+              <span key={label} className="flex items-center gap-4">
+                <Link to={to} className="text-[#666] text-xs hover:text-[#e32028] transition-colors duration-200 no-underline whitespace-nowrap">
+                  {label}
+                </Link>
+                {i < arr.length - 1 && <span className="text-[#333] text-xs">|</span>}
+              </span>
+            ))}
+          </div>
         </div>
       </div>
     </footer>
+
     </>
   );
 }

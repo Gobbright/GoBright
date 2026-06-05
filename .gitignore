@@ -12,6 +12,7 @@ dist
 dist-ssr
 *.local
 server/.env
+src/components/Admin/Attendance/credentials.txt
 
 # Editor directories and files
 .vscode/*

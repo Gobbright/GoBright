@@ -1,4 +1,4 @@
-import cctv from "../../../assets/img/services/other-services.jpg";
+﻿import cctv from "../../../assets/img/services/service5/img-2.png";
 
 const solutionItems = [
   "HD & 4K CCTV cameras",
@@ -27,7 +27,7 @@ function StarIcon() {
 }
 
 export default function Network({
-  tabText = "Networking & CCTV Solution",
+  tabText = "Networking & CCTV Solutions",
   heading = "CCTV Camera Installation Services in Trichy",
   subtitle = "We provide professional CCTV installation in Trichy for commercial, industrial, and residential properties with advanced monitoring capabilities.",
   heroImg = cctv,
@@ -35,7 +35,7 @@ export default function Network({
   return (
     <section className="bg-[#0d0d0d] pt-10">
 
-      {/* Tab — touches right edge */}
+      {/* Tab - touches right edge */}
       <div className="flex justify-end">
         <div className="bg-[#e0e0e0] rounded-tl-[1.8rem] px-8 py-3.5 flex items-center justify-center">
           <span className="text-[#e32028] font-bold text-xl tracking-wide whitespace-nowrap">{tabText}</span>
@@ -51,7 +51,7 @@ export default function Network({
       {/* Two-column: cards left, image right */}
       <div className="max-w-7xl mx-auto px-8 pb-14 grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
 
-        {/* Left — two stacked cards */}
+        {/* Left - two stacked cards */}
         <div className="flex flex-col gap-5">
           <div className="bg-[#1a1a1a] rounded-2xl p-6">
             <p className="text-white font-bold text-base mb-5">Our CCTV Surveillance Solutions Include</p>
@@ -78,13 +78,13 @@ export default function Network({
           </div>
         </div>
 
-        {/* Right — single image */}
+        {/* Right - single image */}
         <div className="w-full h-full min-h-80">
           <img src={heroImg} alt="CCTV cameras" className="w-full h-full object-cover rounded-2xl" />
         </div>
       </div>
 
-      {/* ── Business Networking Section ── */}
+      {/* -- Business Networking Section -- */}
       <div className="max-w-7xl mx-auto px-8 pt-12 pb-4 text-center">
         <h2 className="text-[#e32028] font-bold text-2xl md:text-3xl mb-3">
           Business Networking & IT Infrastructure Solutions in Trichy
@@ -140,7 +140,7 @@ export default function Network({
         </div>
       </div>
 
-      {/* ── Why Choose section ── */}
+      {/* -- Why Choose section -- */}
       <div className="max-w-7xl mx-auto px-8 pb-4 text-center">
         <h2 className="text-[#e32028] font-bold text-2xl md:text-3xl mb-6">
           Why Choose Our Security & Networking Services in Trichy?

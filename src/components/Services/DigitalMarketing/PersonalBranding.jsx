@@ -1,5 +1,5 @@
 import { MediaBlock, RedHeading, SectionLabel, StarList } from "./shared";
-import brandingImg from "../../../assets/img/services/branding.jpg";
+import brandingImg from "../../../assets/img/services/service2/img3.png";
 
 const points = [
   "Profile optimization",

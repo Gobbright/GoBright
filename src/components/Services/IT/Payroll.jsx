@@ -1,4 +1,4 @@
-const whyItems = [
+﻿const whyItems = [
   "End-to-end technology solutions",
   "Custom-built scalable systems",
   "SEO & performance-optimized platforms",
@@ -29,7 +29,7 @@ export default function Payroll({
   return (
     <section className="bg-[#0d0d0d] pt-10">
 
-      {/* Tab — touches left edge */}
+      {/* Tab - touches left edge */}
       <div className="bg-[#e0e0e0] rounded-tr-[1.8rem] inline-flex items-center justify-center px-8 py-3.5">
         <span className="text-[#e32028] font-bold text-xl tracking-wide whitespace-nowrap">{tabText}</span>
       </div>
@@ -63,9 +63,9 @@ export default function Payroll({
       {/* Two cards */}
       <div className="max-w-7xl mx-auto px-8 pb-10 grid grid-cols-1 md:grid-cols-2 gap-6">
 
-        {/* Left — Why GoBright */}
+        {/* Left - Why GoBright */}
         <div className="bg-[#1a1a1a] rounded-2xl p-6">
-          <p className="text-white font-bold text-base mb-5">Why choose us GoBright</p>
+          <p className="text-white font-bold text-base mb-5">Why Choose GoBright</p>
           <ul className="flex flex-col gap-3 mb-5">
             {whyItems.map((item) => (
               <li key={item} className="flex items-start gap-3 text-white text-sm">
@@ -74,11 +74,11 @@ export default function Payroll({
             ))}
           </ul>
           <p className="text-[#cccccc] text-sm leading-relaxed">
-            We don&apos;t just develop software — we build digital growth engines.
+            We don&apos;t just develop software - we build digital growth engines.
           </p>
         </div>
 
-        {/* Right — Payroll solutions */}
+        {/* Right - Payroll solutions */}
         <div className="bg-[#1a1a1a] rounded-2xl p-6">
           <p className="text-white font-bold text-base mb-5">Our payroll solutions include:</p>
           <ul className="flex flex-col gap-3 mb-5">

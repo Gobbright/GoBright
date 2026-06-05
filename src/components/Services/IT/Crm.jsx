@@ -1,4 +1,4 @@
-const crmFeatures = [
+﻿const crmFeatures = [
   "Lead management",
   "Sales pipeline tracking",
   "Automated follow-ups",
@@ -21,7 +21,7 @@ export default function Crm({
   return (
     <section className="bg-[#0d0d0d] pt-10">
 
-      {/* Tab — touches left edge */}
+      {/* Tab - touches left edge */}
       <div className="bg-[#e0e0e0] rounded-tr-[1.8rem] inline-flex items-center justify-center px-8 py-3.5">
         <span className="text-[#e32028] font-bold text-xl tracking-wide whitespace-nowrap">{tabText}</span>
       </div>
@@ -44,7 +44,7 @@ export default function Crm({
       {/* Two-column: features card left, image right */}
       <div className="max-w-7xl mx-auto px-8 pb-14 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
 
-        {/* Left — features card */}
+        {/* Left - features card */}
         <div className="bg-[#1a1a1a] rounded-2xl p-6">
           <p className="text-white font-bold text-base mb-5">Our CRM features :</p>
           <ul className="flex flex-col gap-3 mb-5">
@@ -55,11 +55,11 @@ export default function Crm({
             ))}
           </ul>
           <p className="text-[#cccccc] text-sm leading-relaxed">
-            Increase productivity, Close more deals. Scale efficiently
+            Increase productivity, close more deals, and scale efficiently.
           </p>
         </div>
 
-        {/* Right — image with red accent on far right */}
+        {/* Right - image with red accent on far right */}
         <div className="relative">
           <div className="w-full min-h-64 bg-[#d9d9d9] rounded-2xl overflow-hidden">
             {heroImg && (

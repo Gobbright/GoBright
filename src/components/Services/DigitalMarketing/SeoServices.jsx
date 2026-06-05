@@ -1,5 +1,5 @@
 import { MediaBlock, RedHeading, SectionLabel, StarList } from "./shared";
-import seoImg from "../../../assets/img/whychoose/growth-analytics.jpg";
+import seoImg from "../../../assets/img/services/service2/img4.png";
 
 const seoPoints = [
   "Comprehensive keyword research & global competitor analysis",

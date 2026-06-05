@@ -1,5 +1,6 @@
-import dmImg from "../../../assets/img/services/digital-marketing.jpg";
-import LeadForm from "./LeadForm";
+﻿import dmImg from "../../../assets/img/services/service2/img1.png";
+import PageHeroBackdrop from "../../PageHeroBackdrop";
+import ServiceLeadForm from "../ServiceLeadForm";
 
 const stats = [
   { num: "6000+", label: "Leads Generated" },
@@ -8,11 +9,11 @@ const stats = [
 ];
 
 const whyPoints = [
-  "Proven results — 6000+ qualified leads in the automobile sector alone",
+  "Proven results - 6000+ qualified leads in the automobile sector alone",
   "Full-funnel strategy from awareness to conversion",
   "Real-time analytics & transparent monthly reporting",
   "Trichy-based team with deep local market expertise",
-  "End-to-end execution — no outsourcing, ever",
+  "End-to-end execution - no outsourcing, ever",
 ];
 
 const serviceTags = [
@@ -27,22 +28,23 @@ const serviceTags = [
 
 export default function DigitalHero() {
   return (
-    <section className="pb-28">
+    <section className="relative overflow-hidden pb-28">
+      <PageHeroBackdrop />
       {/* Red top banner */}
-      <div className="bg-[#e32028] px-5 py-6 text-center text-2xl font-extrabold leading-tight text-white md:text-[28px]">
-        Best Digital Marketing Company in Trichy — Performance-Driven
+      <div className="relative z-10 bg-[#e32028] px-5 py-6 text-center text-2xl font-extrabold leading-tight text-white md:text-[28px]">
+        Best Digital Marketing Company in Trichy - Performance-Driven
         <br className="hidden sm:block" /> & Brand-Focused Growth
       </div>
 
-      <div className="mx-auto max-w-7xl pt-12">
-        {/* Section tab — left-aligned, same style as BrandStrategy */}
+      <div className="relative z-10 mx-auto max-w-7xl pt-12">
+        {/* Section tab - left-aligned, same style as BrandStrategy */}
         <h1 className="relative left-[calc(50%-50vw)] w-[min(390px,88vw)] rounded-tr-2xl bg-[#eeeeee] px-7 py-3 text-center text-xl font-extrabold tracking-wide text-[#e32028]">
           Digital Marketing Services
         </h1>
 
-        <div className="grid gap-12 px-6 py-12 md:px-10 lg:grid-cols-[1fr_520px]">
+        <div className="grid gap-12 px-6 py-12 md:px-10 lg:grid-cols-[1fr_620px]">
 
-          {/* ── Left column ── */}
+          {/* -- Left column -- */}
           <div className="space-y-8 scroll-fade-left">
             <div>
               <h2 className="text-xl md:text-2xl font-extrabold leading-tight text-white">
@@ -52,7 +54,7 @@ export default function DigitalHero() {
               <p className="mt-5 text-base font-medium leading-7 text-white">
                 At GoBright, we deliver performance-focused digital marketing services in Trichy that
                 help businesses build visibility, attract qualified leads, and convert them into loyal
-                customers. From social media to SEO, every strategy is crafted with one goal —
+                customers. From social media to SEO, every strategy is crafted with one goal -
                 your measurable growth.
               </p>
             </div>
@@ -101,16 +103,18 @@ export default function DigitalHero() {
             </div>
           </div>
 
-          {/* ── Right column: form + image ── */}
-          <aside className="space-y-8 scroll-fade-right">
-            <LeadForm />
-
-            <div className="relative w-full max-w-[520px] pr-7">
-              <div className="absolute bottom-[-22px] right-0 h-[280px] w-[72px] rounded-br-[34px] bg-[#e32028]" />
+          {/* -- Right column: form + image -- */}
+          <aside className="flex flex-col gap-8 scroll-fade-right">
+            <ServiceLeadForm
+              service="Digital Marketing"
+              className="w-full"
+            />
+            <div className="relative w-full max-w-[620px] pr-7">
+              <div className="absolute bottom-[-22px] right-0 h-[350px] w-[82px] rounded-br-[34px] bg-[#e32028]" />
               <img
                 src={dmImg}
                 alt="Digital marketing strategy"
-                className="relative z-10 h-[320px] w-full rounded-md object-cover shadow-[0_22px_60px_rgba(0,0,0,0.45)]"
+                className="relative z-10 h-[360px] w-full rounded-md object-cover shadow-[0_22px_60px_rgba(0,0,0,0.45)] md:h-[430px]"
               />
             </div>
           </aside>

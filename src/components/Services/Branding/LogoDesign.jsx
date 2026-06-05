@@ -1,5 +1,4 @@
-import logoVariants from "../../../assets/img/services/Logo varients 4.png";
-import BrandingForm from "./BrandingForm";
+﻿import logoVarients from "../../../assets/img/services/Logo varients 4.png";
 
 const offerPoints = [
   "100% Custom Logo Concepts",
@@ -27,12 +26,11 @@ export default function LogoDesign() {
             Logo Design
           </div>
         </div>
-        <div className="mx-auto max-w-[1080px] overflow-hidden rounded-br-[32px] bg-[#0d1b2b] shadow-[0_24px_70px_rgba(0,0,0,0.5)] max-lg:mx-6">
-          <img
-            src={logoVariants}
-            alt="Ivory Code logo design variants"
-            className="block h-auto w-full"
-          />
+        <div className="mx-auto max-w-[1080px] max-lg:mx-6">
+          <div className="group relative overflow-hidden rounded-2xl border-2 border-white bg-white shadow-[0_8px_30px_rgba(255,255,255,0.12),0_20px_50px_rgba(0,0,0,0.4)] hover:border-[#e32028] hover:shadow-[0_8px_40px_rgba(255,255,255,0.2),0_20px_60px_rgba(227,32,40,0.25)] transition-all duration-300">
+            <img src={logoVarients} alt="Logo design variants" className="w-full h-auto object-contain transition duration-500 group-hover:scale-105" />
+            <div className="absolute top-0 left-0 right-0 h-[3px] bg-[#e32028] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          </div>
         </div>
 
         <div className="pt-12 text-center">
@@ -74,18 +72,6 @@ export default function LogoDesign() {
           </div>
         </div>
 
-        {/* ── Enquiry Form ── */}
-        <div className="mt-16 grid gap-12 px-6 lg:px-0 items-center lg:grid-cols-[1fr_520px]">
-          <div>
-            <h3 className="text-2xl font-extrabold text-white leading-tight">
-              Ready to Design Your <span className="text-[#e32028]">Logo?</span>
-            </h3>
-            <p className="mt-4 text-base font-medium leading-7 text-[#aaa] max-w-md">
-              Let GoBright craft a custom logo that becomes the face of your brand — memorable, timeless, and impactful.
-            </p>
-          </div>
-          <BrandingForm />
-        </div>
       </div>
     </section>
   );

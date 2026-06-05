@@ -1,14 +1,13 @@
 import IndustryHero from "./Industry_hero";
 import Restaurants from "./Restuarnts";
 import Sections from "./Sections";
-import EndSection from "./End_section";
-import digitalMarketingImg from "../../../assets/img/services/digital-marketing.jpg";
-import retailImg from "../../../assets/img/services/branding.jpg";
-import restaurantImg from "../../../assets/img/services/photography.jpg";
-import educationImg from "../../../assets/img/services/tech.jpg";
-import healthcareImg from "../../../assets/img/whychoose/data-branding.jpg";
-import realEstateImg from "../../../assets/img/whychoose/growth-analytics.jpg";
-import corporateImg from "../../../assets/img/whychoose/performance.jpg";
+import digitalMarketingImg from "../../../assets/img/Industries/img1.png";
+import retailImg from "../../../assets/img/Industries/img2.png";
+import restaurantImg from "../../../assets/img/Industries/img3.png";
+import educationImg from "../../../assets/img/Industries/img4.png";
+import healthcareImg from "../../../assets/img/Industries/img5.png";
+import realEstateImg from "../../../assets/img/Industries/img6.png";
+import corporateImg from "../../../assets/img/Industries/img7.png";
 
 export default function Industries() {
   const images = {
@@ -35,7 +34,6 @@ export default function Industries() {
       <IndustryHero heroImg={images.heroImg} retailImg={images.retailImg} />
       <Restaurants restaurantImg={images.restaurantImg} educationImg={images.educationImg} />
       <Sections healthcareImg={images.healthcareImg} realEstateImg={images.realEstateImg} corporateImg={images.corporateImg} />
-      <EndSection />
     </main>
   );
 }
