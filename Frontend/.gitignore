@@ -12,11 +12,7 @@ dist
 dist-ssr
 *.local
 server/.env
-Backend/.env
-Backend/admin_credentials.txt
-Backend/node_modules
-Frontend/.claude
-Frontend/.vite
+src/components/Admin/Attendance/credentials.txt
 
 # Editor directories and files
 .vscode/*

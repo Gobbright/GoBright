@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 360">
+  <rect width="520" height="360" fill="#121212"/>
+  <rect x="74" y="98" width="372" height="188" rx="16" fill="#f4f4f4"/>
+  <path d="M84 112l176 104 176-104" fill="none" stroke="#e32028" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M90 274l130-100M430 274L300 174" fill="none" stroke="#bbbbbb" stroke-width="10" stroke-linecap="round"/>
+  <rect x="318" y="132" width="78" height="34" rx="6" fill="#e32028"/>
+  <text x="260" y="330" fill="#fff" font-family="Arial, sans-serif" font-size="24" font-weight="700" text-anchor="middle">Envelope Design</text>
+</svg>

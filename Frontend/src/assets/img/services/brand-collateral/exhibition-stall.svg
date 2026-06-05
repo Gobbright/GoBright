@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 360">
+  <rect width="520" height="360" fill="#121212"/>
+  <rect x="90" y="86" width="340" height="48" rx="8" fill="#e32028"/>
+  <rect x="116" y="134" width="52" height="138" fill="#f4f4f4"/>
+  <rect x="352" y="134" width="52" height="138" fill="#f4f4f4"/>
+  <rect x="168" y="172" width="184" height="100" fill="#eeeeee"/>
+  <rect x="206" y="198" width="108" height="12" rx="6" fill="#191919"/>
+  <rect x="218" y="230" width="84" height="8" rx="4" fill="#888"/>
+  <text x="260" y="330" fill="#fff" font-family="Arial, sans-serif" font-size="24" font-weight="700" text-anchor="middle">Exhibition Stall Design</text>
+</svg>

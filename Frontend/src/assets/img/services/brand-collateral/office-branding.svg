@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 360">
+  <rect width="520" height="360" fill="#121212"/>
+  <rect x="76" y="74" width="368" height="196" rx="14" fill="#eeeeee"/>
+  <rect x="96" y="96" width="160" height="152" rx="8" fill="#191919"/>
+  <rect x="284" y="104" width="116" height="22" rx="11" fill="#e32028"/>
+  <rect x="284" y="154" width="92" height="10" rx="5" fill="#888"/>
+  <rect x="284" y="184" width="122" height="10" rx="5" fill="#aaa"/>
+  <rect x="124" y="126" width="104" height="86" rx="8" fill="#e32028"/>
+  <text x="260" y="330" fill="#fff" font-family="Arial, sans-serif" font-size="24" font-weight="700" text-anchor="middle">Office Branding Graphics</text>
+</svg>

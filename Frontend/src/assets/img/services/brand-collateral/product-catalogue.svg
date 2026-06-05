@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 360">
+  <rect width="520" height="360" fill="#121212"/>
+  <rect x="116" y="58" width="288" height="238" rx="14" fill="#f4f4f4"/>
+  <line x1="260" y1="58" x2="260" y2="296" stroke="#cccccc" stroke-width="6"/>
+  <rect x="142" y="90" width="88" height="70" rx="8" fill="#e32028"/>
+  <rect x="290" y="90" width="88" height="70" rx="8" fill="#e32028"/>
+  <rect x="142" y="190" width="88" height="10" rx="5" fill="#191919"/>
+  <rect x="290" y="190" width="88" height="10" rx="5" fill="#191919"/>
+  <rect x="142" y="220" width="70" height="8" rx="4" fill="#999"/>
+  <rect x="290" y="220" width="70" height="8" rx="4" fill="#999"/>
+  <text x="260" y="330" fill="#fff" font-family="Arial, sans-serif" font-size="24" font-weight="700" text-anchor="middle">Product Catalogue</text>
+</svg>

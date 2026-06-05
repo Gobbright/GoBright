@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 360">
+  <rect width="520" height="360" fill="#121212"/>
+  <rect x="88" y="78" width="344" height="198" rx="16" fill="#f4f4f4"/>
+  <rect x="116" y="110" width="150" height="18" rx="9" fill="#191919"/>
+  <rect x="116" y="152" width="114" height="10" rx="5" fill="#888"/>
+  <rect x="116" y="184" width="150" height="10" rx="5" fill="#aaa"/>
+  <circle cx="344" cy="178" r="54" fill="#e32028"/>
+  <path d="M344 178V124a54 54 0 0154 54z" fill="#191919"/>
+  <text x="260" y="330" fill="#fff" font-family="Arial, sans-serif" font-size="24" font-weight="700" text-anchor="middle">Presentation Deck Design</text>
+</svg>
