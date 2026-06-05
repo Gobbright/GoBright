@@ -43,6 +43,10 @@ router.post("/checkout", async (req, res) => {
     if (openBreak !== -1) { record.breaks[openBreak].end = new Date(); record.markModified("breaks"); }
     let totalBreak = 0;
     record.breaks.forEach(b => { if (b.start && b.end) totalBreak += (new Date(b.end) - new Date(b.start)) / 60000; });
+    if (record.lunchInTime && !record.lunchOutTime) { record.lunchOutTime = new Date(); }
+    if (record.lunchInTime && record.lunchOutTime) {
+      record.totalLunchMinutes = Math.round((new Date(record.lunchOutTime) - new Date(record.lunchInTime)) / 60000);
+    }
     record.outTime = new Date();
     record.totalBreakMinutes = Math.round(totalBreak);
     await record.save();
@@ -75,6 +79,37 @@ router.post("/break-end", async (req, res) => {
     if (idx === -1 || idx === undefined) return res.status(400).json({ success: false, message: "No active break." });
     record.breaks[idx].end = new Date();
     record.markModified("breaks");
+    await record.save();
+    return res.json({ success: true, record });
+  } catch (e) { return res.status(500).json({ success: false, message: e.message }); }
+});
+
+// ── Lunch In ──
+router.post("/lunch-in", async (req, res) => {
+  try {
+    const { employeeId } = req.body;
+    const date = getTodayIST();
+    const record = await Attendance.findOne({ employeeId, date });
+    if (!record?.inTime) return res.status(400).json({ success: false, message: "Not checked in." });
+    if (record.outTime) return res.status(400).json({ success: false, message: "Already checked out." });
+    if (record.lunchInTime) return res.status(400).json({ success: false, message: "Lunch already started." });
+    if (record.breaks.some(b => b.start && !b.end)) return res.status(400).json({ success: false, message: "End break before starting lunch." });
+    record.lunchInTime = new Date();
+    await record.save();
+    return res.json({ success: true, record });
+  } catch (e) { return res.status(500).json({ success: false, message: e.message }); }
+});
+
+// ── Lunch Out ──
+router.post("/lunch-out", async (req, res) => {
+  try {
+    const { employeeId } = req.body;
+    const date = getTodayIST();
+    const record = await Attendance.findOne({ employeeId, date });
+    if (!record?.lunchInTime) return res.status(400).json({ success: false, message: "Lunch not started." });
+    if (record.lunchOutTime) return res.status(400).json({ success: false, message: "Lunch already ended." });
+    record.lunchOutTime = new Date();
+    record.totalLunchMinutes = Math.round((new Date(record.lunchOutTime) - new Date(record.lunchInTime)) / 60000);
     await record.save();
     return res.json({ success: true, record });
   } catch (e) { return res.status(500).json({ success: false, message: e.message }); }
