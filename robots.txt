@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /app/
+Disallow: /storage/
+
+Sitemap: https://www.gobrightglobal.com/sitemap.xml

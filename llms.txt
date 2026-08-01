@@ -1,0 +1,43 @@
+# GoBright
+
+> GoBright is a branding, digital marketing, and technology agency based in Tiruchirappalli (Trichy), Tamil Nadu, India. We help startups, growing businesses, and established brands build distinctive identities, improve digital visibility, generate qualified enquiries, and scale through technology.
+
+GoBright combines brand strategy, creative execution, performance marketing, web development, software, CRM, and automation. The website content is intended for business owners, marketing leaders, founders, and teams evaluating growth partners in Trichy, Tamil Nadu, India, and international markets.
+
+## Main Pages
+
+- [Home](https://www.gobrightglobal.com/): Overview of GoBright, its capabilities, business outcomes, testimonials, FAQs, and contact information.
+- [About GoBright](https://www.gobrightglobal.com/about): Company background, purpose, approach, mission, vision, and values.
+- [All Services](https://www.gobrightglobal.com/services): Complete overview of branding, marketing, creative, and technology services.
+- [Industries](https://www.gobrightglobal.com/industries): Industries and business sectors served by GoBright.
+- [Team](https://www.gobrightglobal.com/team): GoBright leadership and team.
+- [Careers](https://www.gobrightglobal.com/careers): Career opportunities at GoBright.
+- [Contact](https://www.gobrightglobal.com/contact): Enquiries, consultation requests, and office contact details.
+
+## Core Services
+
+- [Branding and Brand Identity](https://www.gobrightglobal.com/services/branding-%26-brand-identity): Brand strategy, positioning, identity systems, logo design, packaging, messaging, and brand guidelines.
+- [Digital Marketing](https://www.gobrightglobal.com/services/digital-marketing): SEO, content marketing, social media marketing, Google Ads, Meta Ads, and performance campaigns.
+- [Technology Solutions](https://www.gobrightglobal.com/services/tech-solutions): Websites, business software, CRM integrations, marketing automation, and digital platforms.
+- [Photography and Videography](https://www.gobrightglobal.com/services/photography-%26-videography): Commercial photography, product photography, corporate films, campaign videos, and social content production.
+- [Other Creative Services](https://www.gobrightglobal.com/services/other-services): Creative design, signage, print, office branding, and related marketing support.
+
+## Key Facts
+
+- Brand name: GoBright
+- Category: Branding, digital marketing, creative, and technology agency
+- Primary location: Tiruchirappalli (Trichy), Tamil Nadu, India
+- Website: https://www.gobrightglobal.com/
+- Primary language: English
+- Geographic focus: Trichy, Tamil Nadu, India, and global markets
+
+## Policies
+
+- [Terms and Conditions](https://www.gobrightglobal.com/terms-and-conditions)
+- [Privacy Policy](https://www.gobrightglobal.com/privacy-policy)
+- [Refund Policy](https://www.gobrightglobal.com/refund-policy)
+
+## Crawling Resources
+
+- [XML Sitemap](https://www.gobrightglobal.com/sitemap.xml)
+- [Robots.txt](https://www.gobrightglobal.com/robots.txt)

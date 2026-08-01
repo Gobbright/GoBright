@@ -1,0 +1,84 @@
+/* about page specific styles */
+
+[style*="opacity:0;"],
+[style*="opacity: 0;"] {
+  opacity: 1 !important;
+}
+
+[style*="transform:translate"],
+[style*="transform: translate"] {
+  transform: none !important;
+}
+
+/* Keep the About page "What We Do" block compact. */
+#root main > section:nth-of-type(3) h2 + p {
+  margin-bottom: 0.6rem !important;
+}
+
+#root main > section:nth-of-type(3) h2 + p + p {
+  margin-bottom: 1rem !important;
+}
+
+#root main > section:nth-of-type(3) ul {
+  gap: 0.7rem !important;
+}
+
+#root main > section:nth-of-type(3) ul li:nth-child(n+6) {
+  display: none !important;
+}
+
+.gb-services-extra-grid {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.gb-goobook-service-card img,
+.gb-goobook-section img {
+  transition: transform 0.45s ease;
+}
+
+.gb-goobook-service-card img[src$="GooBook.jpg"],
+.gb-goobook-section img[src$="GooBook.jpg"] {
+  object-fit: contain !important;
+  background: #ffffff;
+}
+
+.gb-goobook-service-card img[src$="GooBook.jpg"] {
+  padding: 1rem;
+}
+
+.gb-goobook-section img[src$="GooBook.jpg"] {
+  padding: 2rem;
+}
+
+img[src$="BuyyTech_logo.jpeg"] {
+  object-fit: contain !important;
+  background: #eef3f7;
+  padding: 2rem;
+}
+
+.gb-goobook-service-card:hover img,
+.gb-goobook-service-card:focus-visible img,
+.gb-goobook-section .gb-goobook-panel:hover img {
+  transform: scale(1.06);
+}
+
+.gb-goobook-section {
+  scroll-margin-top: 120px;
+}
+
+.gb-goobook-panel {
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.32);
+}
+
+@media (min-width: 768px) {
+  .gb-services-extra-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .gb-goobook-section {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+}

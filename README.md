@@ -1,16 +1,25 @@
-# React + Vite
+# GoBright PHP Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The original exported HTML markup and visual design are retained without redesign. Matching PHP pages add the database/backend connection only. Open the project through Apache/XAMPP; the first request automatically creates the MySQL database `gobright`, installs all tables, and inserts demo records for every admin section.
 
-Currently, two official plugins are available:
+## Local URL
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+`http://localhost/GB/GoBright/`
 
-## React Compiler
+## Admin
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+`http://localhost/GB/GoBright/admin/`
 
-## Expanding the ESLint configuration
+- Admin ID: `gobright_admin`
+- Initial password: `GoBright@2026`
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Main features
+
+- Original `.html` source pages preserved alongside matching `.php` pages
+- MySQL database `gobright` with automatic migration and seed data
+- Server-side admin login, password hashing, sessions and CSRF protection
+- CRUD management for clients, reviews, employees and job openings
+- Contact leads and career applications stored in the database
+- Public team, jobs, clients and reviews connected without replacing the original Tailwind design
+
+The `storage` directory must be writable by PHP for sessions. MySQL defaults are `127.0.0.1`, user `root`, and an empty password for XAMPP; set `DB_HOST`, `DB_PORT`, `DB_NAME`, `DB_USER`, and `DB_PASSWORD` to override them.

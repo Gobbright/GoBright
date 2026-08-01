@@ -1,0 +1,45 @@
+DirectoryIndex index.php
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  Options -MultiViews
+
+  # The homepage also keeps its filename visible, without the PHP extension.
+  RewriteCond %{REQUEST_METHOD} ^(?:GET|HEAD)$ [NC]
+  RewriteCond %{THE_REQUEST} \s/+(.*/)?(?:[?\s]) [NC]
+  RewriteRule ^$ /%1index [R=301,L,NE]
+
+  # Preserve the filename and hide only .php on browser-visible GET/HEAD requests.
+  # POST requests are not redirected, so API request bodies remain intact.
+  RewriteCond %{REQUEST_METHOD} ^(?:GET|HEAD)$ [NC]
+  RewriteCond %{THE_REQUEST} \s/+([^\s?]*?)\.php(?:[?\s]) [NC]
+  RewriteRule ^ /%1 [R=301,L,NE]
+
+  RewriteCond %{THE_REQUEST} \s(/[^\s?]+)\.html[?\s]
+  RewriteRule ^ %{REQUEST_SCHEME}://%{HTTP_HOST}%1 [R=301,L,NE]
+
+  # Old directory-only routes now redirect to filename-preserving clean URLs.
+  RewriteCond %{REQUEST_URI} ^(.*/)(about|careers|contact|industries|privacy-policy|refund-policy|team|terms-and-conditions)/?$ [NC]
+  RewriteRule ^(about|careers|contact|industries|privacy-policy|refund-policy|team|terms-and-conditions)/?$ %1$1/$1 [R=301,L,NE]
+
+  RewriteCond %{REQUEST_URI} ^(.*/)services/?$ [NC]
+  RewriteRule ^services/?$ %1services/services [R=301,L,NE]
+
+  RewriteCond %{REQUEST_URI} ^(.*/)services/(branding-&-brand-identity|digital-marketing|other-services|photography-&-videography|tech-solutions)/?$ [NC]
+  RewriteRule ^services/(branding-&-brand-identity|digital-marketing|other-services|photography-&-videography|tech-solutions)/?$ %1services/$1/$1 [R=301,L,NE]
+
+  RewriteCond %{REQUEST_URI} ^(.*/)services/branding-&-identity/?$ [NC]
+  RewriteRule ^services/branding-&-identity/?$ %1services/branding-&-brand-identity/branding-&-brand-identity [R=301,L,NE]
+
+  RewriteCond %{REQUEST_URI} ^(.*/)admin/?$ [NC]
+  RewriteRule ^admin/?$ %1admin/index [R=301,L,NE]
+
+  # Resolve extensionless requests to real PHP files internally.
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME}.php -f
+  RewriteRule ^(.+?)/?$ $1.php [L]
+
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^ index.php [L]
+</IfModule>
